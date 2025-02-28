@@ -425,7 +425,7 @@ const LandingPage = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border-4 border-black bg-white p-8">
-              <h3 className="text-2xl font-bold mb-6">We help business owners who:</h3>
+              <h3 className="text-2xl font-bold mb-6">We help professionals and business owners who:</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
@@ -492,7 +492,7 @@ const LandingPage = () => {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <p>Specialized skills in administration, marketing, research, and customer support</p>
+                  <p>Specialized skills in administration, marketing, business planning, and customer support</p>
                 </div>
                 
                 <div className="flex items-start">

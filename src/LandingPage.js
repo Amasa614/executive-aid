@@ -274,7 +274,7 @@ const LandingPage = () => {
               <p className="mb-4">
                 Comprehensive support including all services plus strategic assistance and priority response times.
               </p>
-              <a href="#" className="text-white font-bold flex items-center">
+              <a href="https://www.linkedin.com" className="text-white font-bold flex items-center">
                 LEARN MORE <ChevronRight size={16} className="ml-1" />
               </a>
             </div>
@@ -583,16 +583,16 @@ const LandingPage = () => {
             <div>
               <h4 className="font-bold mb-4 text-xl">FOLLOW US</h4>
               <div className="flex space-x-4">
-                <a href="#" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
+                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
                   FB
                 </a>
-                <a href="#" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
+                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
                   TW
                 </a>
-                <a href="#" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
+                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
                   IG
                 </a>
-                <a href="#" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
+                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
                   LI
                 </a>
               </div>

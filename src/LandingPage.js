@@ -282,111 +282,110 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Image Break Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="border-4 border-black transform rotate-1">
-              <img src="/images/Female VA.jpeg" alt="VA working" className="w-full h-full object-cover" />
-            </div>
-            <div className="border-4 border-black transform -rotate-2">
-              <img src="/images/VA group.png" alt="Productivity" className="w-full h-full object-cover" />
-            </div>
-            <div className="border-4 border-black transform rotate-1">
-              <img src="/images/business-growth.jpg" alt="Business growth" className="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Image Break Section 
+      //       <section className="py-12 bg-white">
+      //         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      //           <div className="grid md:grid-cols-3 gap-6">
+      //             <div className="border-4 border-black transform rotate-1">
+      //               <img src="/images/Female VA.jpeg" alt="VA working" className="w-full h-full object-cover" />
+      //             </div>
+      //             <div className="border-4 border-black transform -rotate-2">
+      //               <img src="/images/VA group.png" alt="Productivity" className="w-full h-full object-cover" />
+      //             </div>
+      //             <div className="border-4 border-black transform rotate-1">
+      //               <img src="/images/business-growth.jpg" alt="Business growth" className="w-full h-full object-cover" />
+      //             </div>
+      //           </div>
+      //         </div>
+      //       </section>
+       */}
 
       {/* How It Works - brutalist style */}
-      <section className="py-20 bg-white" id="how-it-works">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-5xl font-bold text-black mb-4 tracking-tighter inline-block bg-teal-300 px-4 py-2 transform rotate-1">THE PROCESS</h2>
-            <p className="text-xl text-black max-w-3xl border-l-4 border-black pl-4">
-              Getting started with ExecutiveAid is simple. Brutally efficient.
+        <section className="py-20 bg-white" id="how-it-works">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-16">
+          <h2 className="text-5xl font-bold text-black mb-4 tracking-tighter inline-block bg-teal-300 px-4 py-2 transform rotate-1">THE PROCESS</h2>
+          <p className="text-xl text-black max-w-3xl border-l-4 border-black pl-4">
+            Getting started with ExecutiveAid is simple. Brutally efficient.
+          </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+          <div className="border-4 border-black p-8 relative">
+            <div className="absolute -top-6 -left-6 bg-black text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
+              1
+            </div>
+            <h3 className="text-2xl font-bold text-black mb-4 mt-4 tracking-tight">CONSULTATION</h3>
+            <p className="text-black">
+              We start with a thorough needs assessment to understand your business and requirements.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border-4 border-black p-8 relative">
-              <div className="absolute -top-6 -left-6 bg-black text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
-                1
-              </div>
-              <h3 className="text-2xl font-bold text-black mb-4 mt-4 tracking-tight">CONSULTATION</h3>
-              <p className="text-black">
-                We start with a thorough needs assessment to understand your business and requirements.
-              </p>
+          <div className="border-4 border-black p-8 relative">
+            <div className="absolute -top-6 -left-6 bg-black text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
+              2
             </div>
-            
-            <div className="border-4 border-black p-8 relative">
-              <div className="absolute -top-6 -left-6 bg-black text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
-                2
-              </div>
-              <h3 className="text-2xl font-bold text-black mb-4 mt-4 tracking-tight">MATCHING</h3>
-              <p className="text-black">
-                We match you with a dedicated VA with the skills and experience tailored to your needs.
-              </p>
-            </div>
-            
-            <div className="border-4 border-black p-8 relative">
-              <div className="absolute -top-6 -left-6 bg-black text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
-                3
-              </div>
-              <h3 className="text-2xl font-bold text-black mb-4 mt-4 tracking-tight">INTEGRATION</h3>
-              <p className="text-black">
-                Your VA integrates into your workflow with minimal disruption, providing immediate value.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials - brutalist style */}
-      <section className="py-20 bg-amber-300 border-y-4 border-black" id="about">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-5xl font-bold text-black mb-4 tracking-tighter inline-block bg-white px-4 py-2 border-4 border-black transform -rotate-1">CLIENT FEEDBACK</h2>
+            <h3 className="text-2xl font-bold text-black mb-4 mt-4 tracking-tight">MATCHING</h3>
+            <p className="text-black">
+              We match you with a dedicated VA with the skills and experience tailored to your needs.
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 border-4 border-black transform rotate-1">
-              <div className="flex items-center mb-6">
-                <div className="bg-black text-white w-16 h-16 flex items-center justify-center font-bold mr-4 text-xl">
-                  JD
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold">JEFFERY CRENTSIL</h4>
-                  <p className="text-black">CEO, BeyondX</p>
-                </div>
-                <img src="/api/placeholder/80/80" alt="Jeffery Crentsil" className="w-16 h-16 ml-auto border-2 border-black" />
-              </div>
-              <p className="text-black text-xl border-l-4 border-black pl-4">
-                "ExecutiveAid transformed how I manage my time. Their VA handles all the administrative tasks I used to dread, freeing me to focus on strategy and growth."
-              </p>
+          <div className="border-4 border-black p-8 relative">
+            <div className="absolute -top-6 -left-6 bg-black text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
+              3
             </div>
-            
-            <div className="bg-white p-8 border-4 border-black transform -rotate-1">
-              <div className="flex items-center mb-6">
-                <div className="bg-black text-white w-16 h-16 flex items-center justify-center font-bold mr-4 text-xl">
-                  SM
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold">WINSTON SACKEY</h4>
-                  <p className="text-black">Founder, Bloom Marketing</p>
-                </div>
-                <img src="executive-aid/public/images/frustrated-owner.png" alt="Frustrated business owner" className="w-16 h-16 ml-auto border-2 border-black" />
-              </div>
-              <p className="text-black text-xl border-l-4 border-black pl-4">
-                "The level of professionalism and attention to detail is outstanding. My VA anticipated needs I didn't even know I had. Worth every penny."
-              </p>
+            <h3 className="text-2xl font-bold text-black mb-4 mt-4 tracking-tight">INTEGRATION</h3>
+            <p className="text-black">
+              Your VA integrates into your workflow with minimal disruption, providing immediate value.
+            </p>
+          </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ Section */}
+        {/* Testimonials - brutalist style */}
+        <section className="py-20 bg-amber-300 border-y-4 border-black" id="about">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-16">
+          <h2 className="text-5xl font-bold text-black mb-4 tracking-tighter inline-block bg-white px-4 py-2 border-4 border-black transform -rotate-1">CLIENT FEEDBACK</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="bg-white p-8 border-4 border-black transform rotate-1">
+            <div className="flex items-center mb-6">
+              <div className="bg-black text-white w-16 h-16 flex items-center justify-center font-bold mr-4 text-xl">
+            JD
+              </div>
+              <div>
+            <h4 className="text-xl font-bold">JEFFERY CRENTSIL</h4>
+            <p className="text-black">CEO, BeyondX</p>
+              </div>
+            </div>
+            <p className="text-black text-xl border-l-4 border-black pl-4">
+              "ExecutiveAid transformed how I manage my time. Their VA handles all the administrative tasks I used to dread, freeing me to focus on strategy and growth."
+            </p>
+          </div>
+          
+          <div className="bg-white p-8 border-4 border-black transform -rotate-1">
+            <div className="flex items-center mb-6">
+              <div className="bg-black text-white w-16 h-16 flex items-center justify-center font-bold mr-4 text-xl">
+            SM
+              </div>
+              <div>
+            <h4 className="text-xl font-bold">WINSTON SACKEY</h4>
+            <p className="text-black">Founder, Bloom Marketing</p>
+              </div>
+            </div>
+            <p className="text-black text-xl border-l-4 border-black pl-4">
+              "The level of professionalism and attention to detail is outstanding. My VA anticipated needs I didn't even know I had. Worth every penny."
+            </p>
+          </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
       <section className="py-20 bg-white" id="faq">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">

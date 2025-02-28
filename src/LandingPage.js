@@ -126,7 +126,7 @@ const LandingPage = () => {
           <div className="md:flex">
             <div className="md:w-2/5 mb-8 md:mb-0">
               <div className="border-4 border-black transform rotate-1">
-                <img src="/api/placeholder/500/600" alt="Business owner with question mark" className="w-full" />
+                <img src="/images/frustrated-owner.png" alt="Business owner with question mark" className="w-full" />
               </div>
             </div>
             
@@ -287,13 +287,13 @@ const LandingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="border-4 border-black transform rotate-1">
-              <img src="/api/placeholder/400/300" alt="VA working" className="w-full h-full object-cover" />
+              <img src="/images/Female VA.jpeg" alt="VA working" className="w-full h-full object-cover" />
             </div>
             <div className="border-4 border-black transform -rotate-2">
-              <img src="/api/placeholder/400/300" alt="Productivity" className="w-full h-full object-cover" />
+              <img src="/images/VA group.png" alt="Productivity" className="w-full h-full object-cover" />
             </div>
             <div className="border-4 border-black transform rotate-1">
-              <img src="/api/placeholder/400/300" alt="Business growth" className="w-full h-full object-cover" />
+              <img src="/images/business-growth.jpg" alt="Business growth" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -357,10 +357,10 @@ const LandingPage = () => {
                   JD
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold">JAMES DONOVAN</h4>
-                  <p className="text-black">CEO, TechNova</p>
+                  <h4 className="text-xl font-bold">JEFFERY CRENTSIL</h4>
+                  <p className="text-black">CEO, BeyondX</p>
                 </div>
-                <img src="/api/placeholder/80/80" alt="James Donovan" className="w-16 h-16 ml-auto border-2 border-black" />
+                <img src="/api/placeholder/80/80" alt="Jeffery Crentsil" className="w-16 h-16 ml-auto border-2 border-black" />
               </div>
               <p className="text-black text-xl border-l-4 border-black pl-4">
                 "ExecutiveAid transformed how I manage my time. Their VA handles all the administrative tasks I used to dread, freeing me to focus on strategy and growth."
@@ -373,10 +373,10 @@ const LandingPage = () => {
                   SM
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold">SARAH MITCHELL</h4>
+                  <h4 className="text-xl font-bold">WINSTON SACKEY</h4>
                   <p className="text-black">Founder, Bloom Marketing</p>
                 </div>
-                <img src="/api/placeholder/80/80" alt="Sarah Mitchell" className="w-16 h-16 ml-auto border-2 border-black" />
+                <img src="executive-aid/public/images/frustrated-owner.png" alt="Frustrated business owner" className="w-16 h-16 ml-auto border-2 border-black" />
               </div>
               <p className="text-black text-xl border-l-4 border-black pl-4">
                 "The level of professionalism and attention to detail is outstanding. My VA anticipated needs I didn't even know I had. Worth every penny."

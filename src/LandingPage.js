@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, ArrowRight, X, Menu, Plus, Minus } from 'lucide-react';
+import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus } from 'lucide-react';
 
 const LandingPage = () => {
   const [openFaq, setOpenFaq] = useState(null);

@@ -81,7 +81,7 @@ const LandingPage = () => {
             </div>
             <div className="md:w-2/5 border-4 border-black bg-white transform -rotate-2">
               <div className="bg-white p-6">
-                <h3 className="text-black font-bold text-xl mb-4 border-b-2 border-black pb-2">REQUEST A CALLBACK</h3>
+                <h3 className="text-black font-bold text-xl mb-4 border-b-2 border-black pb-2">FREE CONSULTATION</h3>
                 <form action="mailto:jefferyamasa@gmail.com" method="post" encType="text/plain">
                   <div className="space-y-4">
                     <input 
@@ -185,27 +185,99 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-20 bg-white" id="mission">
+      {/* Business Owner Types Section 2 - inspired by Image 2 (in body) */}
+      <section className="py-16 bg-teal-50 border-y-4 border-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="border-4 border-black p-8 bg-teal-200 transform rotate-1">
-              <h2 className="text-4xl font-bold mb-6 tracking-tighter">MISSION</h2>
-              <p className="text-xl border-l-4 border-black pl-4">
-                At ExecutiveAid, we aim to empower businesses and professionals through customized, top notch administrative and executive support. We are dedicated to redefining efficiency and giving our clients the time they need to focus on their core business goals.
-              </p>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-black mb-4 tracking-tighter inline-block bg-teal-200 px-4 py-2 transform -rotate-1">HOW WE HELP YOU</h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border-4 border-black bg-white p-8">
+              <h3 className="text-2xl font-bold mb-6">We help professionals and business owners who:</h3>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Need specialized skills their current team doesn't have</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Want to focus on strategy and growth, not admin tasks</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Are spending too much time handling marketing when they should be making sales</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Need work done on a budget without compromising quality</p>
+                </div>
+              </div>
             </div>
             
-            <div className="border-4 border-black p-8 bg-amber-200 transform -rotate-1">
-              <h2 className="text-4xl font-bold mb-6 tracking-tighter">VISION</h2>
-              <p className="text-xl border-l-4 border-black pl-4">
-                We strive to be a trusted partner in the growth of businesses, offering dependable virtual assistance that helps businesses and professionals focus on what truly drives their success while we take care of the details.
-              </p>
+            <div className="border-4 border-black bg-white p-8">
+              <h3 className="text-2xl font-bold mb-6">What we provide:</h3>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Pre-trained VAs who hit the ground running from day one</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Flexible support that scales with your business needs</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Specialized skills in administration, marketing, business planning, and customer support</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p>Cost-effective solutions that deliver real ROI</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
+      
       {/* Features/Services - brutalist style */}
       <section className="py-20 bg-white border-y-4 border-black" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,6 +416,27 @@ const LandingPage = () => {
           </div>
         </section>
 
+              {/* Mission & Vision Section */}
+      <section className="py-20 bg-white" id="mission">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="border-4 border-black p-8 bg-teal-200 transform rotate-1">
+              <h2 className="text-4xl font-bold mb-6 tracking-tighter">MISSION</h2>
+              <p className="text-xl border-l-4 border-black pl-4">
+                At ExecutiveAid, we aim to empower businesses and professionals through customized, top notch administrative and executive support. We are dedicated to redefining efficiency and giving our clients the time they need to focus on their core business goals.
+              </p>
+            </div>
+            
+            <div className="border-4 border-black p-8 bg-amber-200 transform -rotate-1">
+              <h2 className="text-4xl font-bold mb-6 tracking-tighter">VISION</h2>
+              <p className="text-xl border-l-4 border-black pl-4">
+                We strive to be a trusted partner in the growth of businesses, offering dependable virtual assistance that helps businesses and professionals focus on what truly drives their success while we take care of the details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
         {/* Testimonials - brutalist style */}
         <section className="py-20 bg-amber-300 border-y-4 border-black" id="about">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -416,98 +509,6 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Business Owner Types Section 2 - inspired by Image 2 (in body) */}
-      <section className="py-16 bg-teal-50 border-y-4 border-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-black mb-4 tracking-tighter inline-block bg-teal-200 px-4 py-2 transform -rotate-1">HOW WE HELP YOU</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="border-4 border-black bg-white p-8">
-              <h3 className="text-2xl font-bold mb-6">We help professionals and business owners who:</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Need specialized skills their current team doesn't have</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Want to focus on strategy and growth, not admin tasks</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Are spending too much time handling marketing when they should be making sales</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-amber-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Need work done on a budget without compromising quality</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="border-4 border-black bg-white p-8">
-              <h3 className="text-2xl font-bold mb-6">What we provide:</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Pre-trained VAs who hit the ground running from day one</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Flexible support that scales with your business needs</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Specialized skills in administration, marketing, business planning, and customer support</p>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-teal-600 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p>Cost-effective solutions that deliver real ROI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA - brutalist style */}
       <section className="py-20 bg-amber-600 text-white border-b-4 border-black">
@@ -558,7 +559,7 @@ const LandingPage = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4 tracking-tighter">EXECUTIVE<span className="text-amber-600">AID</span></h3>
               <p className="text-white">
-                Premium virtual assistant services for executives and growing businesses.
+                Efficiency Redefined.
               </p>
             </div>
             

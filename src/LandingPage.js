@@ -293,7 +293,7 @@ const LandingPage = () => {
               <div className="text-black mb-4">
                 <Calendar size={48} className="stroke-2" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">CALENDAR MANAGEMENT</h3>
+              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">EMAIL & CALENDAR MANAGEMENT</h3>
               <p className="text-black">
                 We handle scheduling, meeting coordination, and ensure you never miss an important appointment.
               </p>
@@ -301,11 +301,12 @@ const LandingPage = () => {
             
             <div className="border-4 border-black p-8 hover:bg-teal-100 transition">
               <div className="text-black mb-4">
-                <Mail size={48} className="stroke-2" />
+                <Megaphone size={48} className="stroke-2" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">EMAIL MANAGEMENT</h3>
+              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">SOCIAL MEDIA MANAGEMENT & MARKETING
+              </h3>
               <p className="text-black">
-                Inbox organization, response drafting, and priority flagging to keep communications flowing smoothly.
+                Strategic content creation, audience engagement, and analytics-driven campaigns to boost your online presence.
               </p>
             </div>
             
@@ -313,9 +314,9 @@ const LandingPage = () => {
               <div className="text-black mb-4">
                 <BarChart size={48} className="stroke-2" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">RESEARCH & REPORTS</h3>
+              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">DATA ENTRY & DATABASE MANAGEMENT</h3>
               <p className="text-black">
-                Comprehensive market research, competitor analysis, and data-driven reports tailored to your needs.
+              Accurate data input, organization, and database maintenance to keep your information structured and accessible.
               </p>
             </div>
             
@@ -323,9 +324,9 @@ const LandingPage = () => {
               <div className="text-black mb-4">
                 <Clock size={48} className="stroke-2" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">TASK MANAGEMENT</h3>
+              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">PROJECT MANAGEMENT</h3>
               <p className="text-black">
-                We track deadlines, manage project timelines, and ensure everything stays on schedule.
+              We oversee project planning, execution, and delivery, ensuring milestones are met on time and within budget.
               </p>
             </div>
             

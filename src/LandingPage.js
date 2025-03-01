@@ -244,7 +244,7 @@ const LandingPage = () => {
           <div className="md:flex">
             <div className="md:w-2/5 mb-8 md:mb-0">
               <div className="border-4 border-black transform rotate-1">
-                <img src="/images/frustrated-owner.png" alt="Business owner with question mark" className="w-full" />
+                <img src="images/fraustrated-owner.png-owner.png" alt="Business owner with question mark" className="w-full" />
               </div>
             </div>
             

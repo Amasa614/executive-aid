@@ -611,58 +611,65 @@ const LandingPage = () => {
       </section>
 
       {/* Footer - brutalist style */}
-      <footer className="bg-black text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 tracking-tighter">EXECUTIVE<span className="text-amber-600">AID</span></h3>
-              <p className="text-white">
-                Efficiency Redefined.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-xl">CONTACT</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <Mail size={16} className="mr-2" />
-                  <a href="mailto:jefferyamasa@gmail.com" className="text-white hover:text-amber-600">
-                    jefferyamasa@gmail.com
-                  </a>
-                </li>
-                <li className="flex items-center">
-                  <Phone size={16} className="mr-2" />
-                  <a href="tel:+1234567890" className="text-white hover:text-amber-600">
-                    +1 (234) 567-890
-                  </a>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-bold mb-4 text-xl">FOLLOW US</h4>
-              <div className="flex space-x-4">
-                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
-                  FB
-                </a>
-                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
-                  TW
-                </a>
-                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
-                  IG
-                </a>
-                <a href="https://www.facebook.com" className="bg-white text-black w-10 h-10 flex items-center justify-center font-bold hover:bg-amber-600 hover:text-white transition">
-                  LI
-                </a>
-              </div>
-            </div>
+    <footer className="bg-black text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold mb-4 tracking-tighter">EXECUTIVE<span className="text-amber-600">AID</span></h3>
+            <p className="text-white">
+              Efficiency Redefined.
+            </p>
           </div>
-          
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; {new Date().getFullYear()} EXECUTIVEAID LTD. ALL RIGHTS RESERVED.</p>
+
+          <div>
+            <h4 className="font-bold mb-4 text-xl">CONTACT</h4>
+            <ul className="space-y-2">
+              <li className="flex items-center">
+                <Mail size={16} className="mr-2" />
+                <span className="text-white">jefferyamasa@gmail.com</span>
+              </li>
+              <li className="flex items-center">
+                <Phone size={16} className="mr-2" />
+                <a href="tel:+1234567890" className="text-white hover:text-amber-600">
+                  +1 (234) 567-890
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4 text-xl">SEND A MESSAGE</h4>
+            <form onSubmit={handleSubmit}> {/* Uses Formspree submission */}
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Your Email" 
+                className="w-full px-4 py-2 mb-4 border-2 border-white text-black focus:outline-none"
+                required 
+              />
+              <textarea 
+                name="message" 
+                placeholder="Your Message" 
+                rows="3"
+                className="w-full px-4 py-2 mb-4 border-2 border-white text-black focus:outline-none"
+                required
+              ></textarea>
+              <button 
+                type="submit" 
+                className="w-full py-2 font-bold border-2 border-white bg-white text-black hover:bg-amber-600 hover:text-white transition"
+              >
+                SEND
+              </button>
+            </form>
           </div>
         </div>
-      </footer>
+
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center">
+          <p>&copy; {new Date().getFullYear()} EXECUTIVEAID LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </footer>
+
     </div>
   );
 };

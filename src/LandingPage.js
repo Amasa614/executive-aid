@@ -113,6 +113,42 @@ const CTAForm = () => {
   );
 };
 
+// Add this inside the Footer Component
+const FooterForm = () => {
+  const [state, handleSubmit] = useForm("mzzdngzj"); // Ensure it's your correct Formspree form ID
+
+  if (state.succeeded) {
+    return <p className="text-center text-white">Thank you! Your message has been sent.</p>;
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your Email" 
+        className="w-full px-4 py-2 mb-4 border-2 border-white text-black focus:outline-none"
+        required 
+      />
+      <textarea 
+        name="message" 
+        placeholder="Your Message" 
+        rows="3"
+        className="w-full px-4 py-2 mb-4 border-2 border-white text-black focus:outline-none"
+        required
+      ></textarea>
+      <button 
+        type="submit" 
+        disabled={state.submitting}
+        className="w-full py-2 font-bold border-2 border-white bg-white text-black hover:bg-amber-600 hover:text-white transition"
+      >
+        {state.submitting ? 'Sending...' : 'Send'}
+      </button>
+    </form>
+  );
+};
+
+
 const LandingPage = () => {
   const [openFaq, setOpenFaq] = useState(null);
   
@@ -610,15 +646,15 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Footer - brutalist style */}
-    <footer className="bg-black text-white py-12">
+    {/* Footer - brutalist style */}
+        <footer className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 tracking-tighter">EXECUTIVE<span className="text-amber-600">AID</span></h3>
-            <p className="text-white">
-              Efficiency Redefined.
-            </p>
+            <h3 className="text-2xl font-bold mb-4 tracking-tighter">
+              EXECUTIVE<span className="text-amber-600">AID</span>
+            </h3>
+            <p className="text-white">Efficiency Redefined.</p>
           </div>
 
           <div>
@@ -630,37 +666,14 @@ const LandingPage = () => {
               </li>
               <li className="flex items-center">
                 <Phone size={16} className="mr-2" />
-                <a href="tel:+1234567890" className="text-white hover:text-amber-600">
-                  +1 (234) 567-890
-                </a>
+                <span className="text-white">+1 (234) 567-890</span>
               </li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold mb-4 text-xl">SEND A MESSAGE</h4>
-            <form onSubmit={handleSubmit}> {/* Uses Formspree submission */}
-              <input 
-                type="email" 
-                name="email" 
-                placeholder="Your Email" 
-                className="w-full px-4 py-2 mb-4 border-2 border-white text-black focus:outline-none"
-                required 
-              />
-              <textarea 
-                name="message" 
-                placeholder="Your Message" 
-                rows="3"
-                className="w-full px-4 py-2 mb-4 border-2 border-white text-black focus:outline-none"
-                required
-              ></textarea>
-              <button 
-                type="submit" 
-                className="w-full py-2 font-bold border-2 border-white bg-white text-black hover:bg-amber-600 hover:text-white transition"
-              >
-                SEND
-              </button>
-            </form>
+            <FooterForm /> {/* Using the corrected Formspree form */}
           </div>
         </div>
 

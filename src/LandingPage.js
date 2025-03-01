@@ -42,7 +42,7 @@ const HeroForm = () => {
             name="message"
             placeholder="YOUR MESSAGE"
             rows="3"
-            className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
+            className="w-full px-4 py-2 border-2 border-black font-mono text-black focus:outline-none focus:ring-2 focus:ring-black" 
             required
           ></textarea>
           <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-600 text-sm" />
@@ -97,7 +97,7 @@ const CTAForm = () => {
         name="message"
         placeholder="YOUR MESSAGE"
         rows="3"
-        className="w-full px-4 py-3 mb-4 border-4 border-black font-mono focus:outline-none"
+        className="w-full px-4 py-3 mb-4 border-4 border-black text-black font-mono focus:outline-none"
         required
       ></textarea>
       <ValidationError prefix="Message" field="message" errors={state.errors} className="text-white text-sm mb-2 block" />
@@ -244,7 +244,7 @@ const LandingPage = () => {
           <div className="md:flex">
             <div className="md:w-2/5 mb-8 md:mb-0">
               <div className="border-4 border-black transform rotate-1">
-                <img src="executive-aid/public/images/fraustrated-owner.png" alt="Frustrated business owner" className="w-full" />
+                <img src="/images/fraustrated-owner.png" alt="Frustrated business owner" className="w-full" />
               </div>
             </div>
             
@@ -567,7 +567,7 @@ const LandingPage = () => {
           <div className="bg-white p-8 border-4 border-black transform rotate-1">
             <div className="flex items-center mb-6">
               <div className="bg-black text-white w-16 h-16 flex items-center justify-center font-bold mr-4 text-xl">
-            JD
+            JC
               </div>
               <div>
             <h4 className="text-xl font-bold">JEFFERY CRENTSIL</h4>
@@ -582,7 +582,7 @@ const LandingPage = () => {
           <div className="bg-white p-8 border-4 border-black transform -rotate-1">
             <div className="flex items-center mb-6">
               <div className="bg-black text-white w-16 h-16 flex items-center justify-center font-bold mr-4 text-xl">
-            SM
+            WS
               </div>
               <div>
             <h4 className="text-xl font-bold">WINSTON SACKEY</h4>

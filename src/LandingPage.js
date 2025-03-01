@@ -235,52 +235,56 @@ const LandingPage = () => {
       </header>
       
       {/* Business Owner Types Section */}
-    <section className="py-16 bg-white border-b-4 border-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-black mb-6 inline-block">
-            Are you one of these <span className="text-amber-600">Business</span> owners?
-          </h2>
-        </div>
+{/* Business Owner Types Section */}
+<section className="py-16 bg-white border-b-4 border-black">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-black mb-6 inline-block">
+        Are you one of these <span className="text-amber-600">Business</span> owners?
+      </h2>
+    </div>
 
-        <div className="md:flex items-stretch">
-          
-          {/* Image Container */}
-          <div className="md:w-2/5 flex">
-            <div className="border-4 border-black w-full h-full">
-              <img 
-                src="/images/fraustrated-owner.png" 
-                alt="Frustrated business owner" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Text Container */}
-          <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
-            <div className="space-y-6">
-              {[
-                { title: "The Busy Entrepreneur", desc: "I need more time to focus on growing my business, but can't manage all the admin tasks." },
-                { title: "The Sleep-Deprived Leader", desc: "I hired someone to handle my admin and marketing tasks; I cannot find time to train or delegate the tasks as the only time I am free is by midnight." },
-                { title: "The One Who Wants to Diversify", desc: "I'd like to target a new market but don't have the resources, head space and time." },
-                { title: "The Smart Spender", desc: "I want a cost-effective virtual assistant without compromising on quality." },
-              ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
-                    ✅
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold">{item.title}</h3>
-                    <p className="text-gray-700">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
+    <div className="md:flex items-stretch">
+      
+      {/* Image Container */}
+      <div className="md:w-2/5 flex">
+        <div className="border-4 border-black w-full h-full">
+          <img 
+            src="/images/fraustrated-owner.png" 
+            alt="Frustrated business owner" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
-    </section>
+
+      {/* Text Container */}
+      <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
+        <div className="space-y-6">
+          {[
+            { title: "The Busy Entrepreneur", desc: "I need more time to focus on growing my business, but can't manage all the admin tasks." },
+            { title: "The Sleep-Deprived Leader", desc: "I hired someone to handle my admin and marketing tasks; I cannot find time to train or delegate the tasks as the only time I am free is by midnight." },
+            { title: "The One Who Wants to Diversify", desc: "I'd like to target a new market but don't have the resources, head space and time." },
+            { title: "The Smart Spender", desc: "I want a cost-effective virtual assistant without compromising on quality." },
+          ].map((item, index) => (
+            <div key={index} className="flex items-start">
+              <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-gray-700">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
       {/* Business Owner Types Section 2 - inspired by Image 2 (in body) */}

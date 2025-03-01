@@ -277,7 +277,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Features/Services - brutalist style */}
       <section className="py-20 bg-white border-y-4 border-black" id="services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -416,8 +416,8 @@ const LandingPage = () => {
           </div>
         </section>
 
-              {/* Mission & Vision Section */}
-      <section className="py-20 bg-white" id="mission">
+      {/* Mission & Vision Section */}
+      <section className="py-20 bg-white border-y-4 border-black" id="mission">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="border-4 border-black p-8 bg-teal-200 transform rotate-1">

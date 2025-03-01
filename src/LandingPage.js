@@ -1,5 +1,117 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus } from 'lucide-react';
+import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus, Megaphone } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
+
+// Hero Form Component
+const HeroForm = () => {
+  const [state, handleSubmit] = useForm("mzzdngzj"); // Your Formspree form ID
+  
+  if (state.succeeded) {
+    return (
+      <div className="bg-white p-6 text-center">
+        <h3 className="text-black font-bold text-xl mb-4 border-b-2 border-black pb-2">THANK YOU!</h3>
+        <p className="text-black my-6">Your consultation request has been received. We'll contact you shortly to schedule your free session.</p>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="bg-white p-6">
+      <h3 className="text-black font-bold text-xl mb-4 border-b-2 border-black pb-2">FREE CONSULTATION</h3>
+      <form onSubmit={handleSubmit}>
+        <div className="space-y-4">
+          <input 
+            type="text" 
+            name="name"
+            placeholder="NAME"
+            className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
+            required
+          />
+          <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-sm" />
+          
+          <input 
+            type="email" 
+            name="email"
+            placeholder="EMAIL"
+            className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
+            required
+          />
+          <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-600 text-sm" />
+          
+          <textarea 
+            name="message"
+            placeholder="YOUR MESSAGE"
+            rows="3"
+            className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
+            required
+          ></textarea>
+          <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-600 text-sm" />
+          
+          <button 
+            type="submit" 
+            disabled={state.submitting}
+            className={`w-full py-2 font-bold border-2 border-black ${state.submitting ? 'bg-gray-400' : 'bg-amber-600 text-white hover:bg-black transition'}`}
+          >
+            {state.submitting ? 'SENDING...' : 'SUBMIT'}
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+// CTA Form Component 
+const CTAForm = () => {
+  const [state, handleSubmit] = useForm("mzzdngzj"); // Can use same or different form ID
+  
+  if (state.succeeded) {
+    return (
+      <div className="text-center bg-white text-black p-6 border-4 border-white">
+        <h3 className="font-bold text-xl mb-2">THANK YOU!</h3>
+        <p>We'll be in touch with you shortly.</p>
+      </div>
+    );
+  }
+  
+  return (
+    <form onSubmit={handleSubmit}>
+      <input 
+        type="text" 
+        name="name"
+        placeholder="YOUR NAME"
+        className="w-full px-4 py-3 mb-4 border-4 border-black font-mono focus:outline-none" 
+        required
+      />
+      <ValidationError prefix="Name" field="name" errors={state.errors} className="text-white text-sm mb-2 block" />
+      
+      <input 
+        type="email" 
+        name="email"
+        placeholder="ENTER YOUR EMAIL"
+        className="w-full px-4 py-3 mb-4 border-4 border-black font-mono focus:outline-none" 
+        required
+      />
+      <ValidationError prefix="Email" field="email" errors={state.errors} className="text-white text-sm mb-2 block" />
+      
+      <textarea
+        name="message"
+        placeholder="YOUR MESSAGE"
+        rows="3"
+        className="w-full px-4 py-3 mb-4 border-4 border-black font-mono focus:outline-none"
+        required
+      ></textarea>
+      <ValidationError prefix="Message" field="message" errors={state.errors} className="text-white text-sm mb-2 block" />
+      
+      <button 
+        type="submit" 
+        disabled={state.submitting}
+        className={`w-full py-4 px-8 font-bold text-xl border-4 border-white ${state.submitting ? 'bg-gray-400 text-black' : 'bg-black text-white hover:bg-white hover:text-black transition'}`}
+      >
+        {state.submitting ? 'SENDING...' : 'LET\'S TALK'}
+      </button>
+    </form>
+  );
+};
 
 const LandingPage = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -70,7 +182,7 @@ const LandingPage = () => {
               <div className="mb-8">
                 <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tighter leading-none">GROW YOUR BUSINESS WITH A VIRTUAL ASSISTANT</h1>
                 <p className="text-xl mb-8 border-l-4 border-amber-600 pl-4">
-                  FULLY TRAINED VIRTUAL ASSISTANTS FOR BUSINESS OWNERS & ENTREPRENEURS
+                  FULLY TRAINED VIRTUAL ASSISTANTS FOR BUSINESSES & PROFESSIONALS
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
                   <button className="bg-amber-600 text-white px-8 py-3 font-bold hover:bg-amber-700 transition border-2 border-amber-600">
@@ -80,38 +192,8 @@ const LandingPage = () => {
               </div>
             </div>
             <div className="md:w-2/5 border-4 border-black bg-white transform -rotate-2">
-              <div className="bg-white p-6">
-                <h3 className="text-black font-bold text-xl mb-4 border-b-2 border-black pb-2">FREE CONSULTATION</h3>
-                <form action="mailto:jefferyamasa@gmail.com" method="post" encType="text/plain">
-                  <div className="space-y-4">
-                    <input 
-                      type="text" 
-                      name="name"
-                      placeholder="NAME"
-                      className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
-                      required
-                    />
-                    <input 
-                      type="email" 
-                      name="email"
-                      placeholder="EMAIL"
-                      className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
-                      required
-                    />
-                    <textarea 
-                      name="message"
-                      placeholder="YOUR MESSAGE"
-                      rows="3"
-                      className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
-                      required
-                    ></textarea>
-                    <button type="submit" className="w-full bg-amber-600 text-white py-2 font-bold hover:bg-black transition border-2 border-black">
-                      SUBMIT
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+              <HeroForm />
+          </div>
           </div>
         </div>
       </header>
@@ -522,32 +604,7 @@ const LandingPage = () => {
               </p>
             </div>
             <div className="md:w-1/3">
-              <form action="mailto:jefferyamasa@gmail.com" method="post" encType="text/plain">
-                <input 
-                  type="text" 
-                  name="name"
-                  placeholder="YOUR NAME"
-                  className="w-full px-4 py-3 mb-4 border-4 border-black font-mono focus:outline-none" 
-                  required
-                />
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder="ENTER YOUR EMAIL"
-                  className="w-full px-4 py-3 mb-4 border-4 border-black font-mono focus:outline-none" 
-                  required
-                />
-                <textarea
-                  name="message"
-                  placeholder="YOUR MESSAGE"
-                  rows="3"
-                  className="w-full px-4 py-3 mb-4 border-4 border-black font-mono focus:outline-none"
-                  required
-                ></textarea>
-                <button type="submit" className="w-full bg-black text-white py-4 px-8 font-bold text-xl border-4 border-white hover:bg-white hover:text-black transition">
-                  LET'S TALK
-                </button>
-              </form>
+              <CTAForm />
             </div>
           </div>
         </div>

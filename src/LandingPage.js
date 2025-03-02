@@ -41,8 +41,7 @@ const HeroForm = () => {
         <input 
         type="tel" 
         name="phone"
-        placeholder="PHONE (XXX-XXX-XXXX)"
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        placeholder="PHONE NUMBER"
         className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
         required
         />

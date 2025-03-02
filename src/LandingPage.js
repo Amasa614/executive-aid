@@ -108,6 +108,15 @@ const CTAForm = () => {
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} className="text-gray-500 text-sm mb-2 block" />
       
+      <input 
+        type="tel" 
+        name="phone"
+        placeholder="PHONE NUMBER"
+        className="w-full px-4 py-3 mb-4 border-2 border-gray-300 font-mono focus:outline-none" 
+        required
+      />
+      <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-gray-500 text-sm mb-2 block" />
+      
       <textarea
         name="message"
         placeholder="YOUR MESSAGE"

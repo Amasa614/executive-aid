@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus, Megaphone } from 'lucide-react';
+import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus, Megaphone, MessageCircleMore } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 
 // Hero Form Component – used in the hero section (white card on dark hero)
@@ -473,7 +473,7 @@ const LandingPage = () => {
             </div>
             <div className="border border-gray-300 p-8 hover:bg-gray-50 transition">
               <div className="text-gray-900 mb-4">
-                <Phone size={48} className="stroke-2" />
+                <MessageCircleMore size={48} className="stroke-2" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
                 CUSTOMER SUPPORT

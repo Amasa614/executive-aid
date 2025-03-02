@@ -261,54 +261,52 @@ const LandingPage = () => {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
       <h2 className="text-4xl font-bold text-black mb-6 inline-block">
-        Are you one of these <span className="text-amber-600">Businesses?</span>
+        Envision your business one year from today <span className="text-amber-600">What do you see?</span>
       </h2>
     </div>
 
     <div className="md:flex items-stretch">
       
-      {/* Image Container */}
-      <div className="md:w-2/5 flex">
-        <div className="border-4 border-black w-full h-full">
-          <img 
-            src="/images/fraustrated-owner.png" 
-            alt="Frustrated business owner" 
-            className="w-full h-full object-cover"
-          />
+     {/* Image Container */}
+        <div className="md:w-2/5 flex">
+          <div className="border-4 border-black w-full h-full">
+            <img 
+          src="/images/fraustrated-owner.png" 
+          alt="Frustrated business owner" 
+          className="w-full h-full object-cover"
+            />
+          </div>
         </div>
-      </div>
 
-      {/* Text Container */}
-      <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
-        <div className="space-y-6">
-          {[
-            { title: "The Busy Entrepreneur", desc: "I need more time to focus on growing my business, but can't manage all the admin tasks." },
-            { title: "The Sleep-Deprived Leader", desc: "I hired someone to handle my admin and marketing tasks; I cannot find time to train or delegate the tasks as the only time I am free is by midnight." },
-            { title: "The One Who Wants to Diversify", desc: "I'd like to target a new market but don't have the resources, head space and time." },
-            { title: "The Smart Spender", desc: "I want a cost-effective virtual assistant without compromising on quality." },
-          ].map((item, index) => (
-            <div key={index} className="flex items-start">
-              <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="text-gray-700">{item.desc}</p>
-              </div>
+        {/* Text Container */}
+        <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
+          <div className="space-y-6">
+            {[
+          "Buried under piles of paperwork and administrative tasks, you're struggling to keep up with the demands of your growing business.",
+          "Struggling to keep up with scheduling and appointments, you're missing out on valuable opportunities to grow your business.",
+          "While spending hours managing emails and correspondence, you start to notice how it pulls your focus away from strategic planning and the bigger picture.",
+          "With so much time spent on data entry and document organization, you feel overwhelmed and unable to scale your business effectively.",
+          "Caught between marketing, customer support, and operations, you become stretched too thin to provide the quality service your clients deserve"
+            ].map((desc, index) => (
+          <div key={index} className="flex items-start">
+            <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
             </div>
-          ))}
+            <p className="text-gray-700">{desc}</p>
+          </div>
+            ))}
+          </div>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-
+          </div>
+        </div>
+      </section>
 
 
-      {/* Business Owner Types Section 2 - inspired by Image 2 (in body) */}
+
+        {/* Business Owner Types Section 2 - inspired by Image 2 (in body) */}
       <section className="py-16 bg-teal-50 border-y-4 border-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -641,7 +639,7 @@ const LandingPage = () => {
             <div className="md:w-2/3 mb-8 md:mb-0">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">READY TO RECLAIM YOUR TIME?</h2>
               <p className="text-xl">
-                Join executives worldwide who trust ExecutiveAid to handle their day-to-day tasks.
+                  Join executives worldwide who rely on ExecutiveAid as their trusted partner to handle the details while they drive their success.
               </p>
             </div>
             <div className="md:w-1/3">

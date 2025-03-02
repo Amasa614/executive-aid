@@ -479,7 +479,7 @@ const LandingPage = () => {
           CUSTOMER SUPPORT
         </h3>
         <p className="text-gray-700">
-          Professional phone handling, client communication, and first-line support for your customers.
+          Professional client communication, and first-line support for your customers.
         </p>
       </div>
       <div className="border border-gray-300 bg-indigo-900 text-white p-8 transition transform duration-300 ease-in-out hover:bg-indigo-800 hover:shadow-lg hover:scale-105">
@@ -498,54 +498,55 @@ const LandingPage = () => {
 </section>
 
 
-      {/* Process Section */}
-      <section className="py-20 bg-gray-50" id="how-it-works">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform rotate-1">
-              THE PROCESS
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-              Getting started with ExecutiveAid is simple. Brutally efficient.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border border-gray-300 p-8 relative">
-              <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
-                1
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-                CONSULTATION
-              </h3>
-              <p className="text-gray-700">
-                We start with a thorough needs assessment to understand your business and requirements.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-8 relative">
-              <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
-                2
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-                MATCHING
-              </h3>
-              <p className="text-gray-700">
-                We match you with a dedicated VA with the skills and experience tailored to your needs.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-8 relative">
-              <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
-                3
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-                INTEGRATION
-              </h3>
-              <p className="text-gray-700">
-                Your VA integrates into your workflow with minimal disruption, providing immediate value.
-              </p>
-            </div>
-          </div>
+     {/* Process Section */}
+<section className="py-20 bg-gray-50" id="how-it-works">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mb-16">
+      <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform rotate-1">
+        THE PROCESS
+      </h2>
+      <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
+        Getting started with ExecutiveAid is simple. Brutally efficient.
+      </p>
+    </div>
+    <div className="grid md:grid-cols-3 gap-8">
+      <div className="border border-gray-300 p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100">
+        <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
+          1
         </div>
-      </section>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
+          CONSULTATION
+        </h3>
+        <p className="text-gray-700">
+          We start with a thorough needs assessment to understand your business and requirements.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100">
+        <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
+          2
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
+          MATCHING
+        </h3>
+        <p className="text-gray-700">
+          We match you with a dedicated VA with the skills and experience tailored to your needs.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100">
+        <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold">
+          3
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
+          INTEGRATION
+        </h3>
+        <p className="text-gray-700">
+          Your VA integrates into your workflow with minimal disruption, providing immediate value.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Mission & Vision Section */}
       <section className="py-20 bg-white border-t border-b border-gray-300" id="mission">

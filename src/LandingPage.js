@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 // Hero Form Component – used in the hero section (white card on dark hero)
 const HeroForm = () => {
-  const [state, handleSubmit] = useForm("mzzdngzj"); // Your Formspree form ID
+  const [state, handleSubmit] = useForm("mzzdngzj"); //Formspree form ID
   
   if (state.succeeded) {
     return (

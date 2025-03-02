@@ -309,10 +309,6 @@ const LandingPage = () => {
       </div>
     </section>
 
-
-
-
-
         {/* Business Owner Types Section 2 - inspired by Image 2 (in body) */}
       <section className="py-16 bg-teal-50 border-y-4 border-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

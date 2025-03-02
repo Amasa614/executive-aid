@@ -309,7 +309,7 @@ const LandingPage = () => {
       </section>
 
       {/* How We Help You Section */}
-      <section className="py-16 bg-gray-50 border-t border-b border-gray-300">
+      <section className="py-16 bg-gray-50 border-t border-b border-gray-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
@@ -416,14 +416,14 @@ const LandingPage = () => {
       </section>
 
 {/* Services Section */}
-<section className="py-20 bg-white border-t border-b border-gray-300" id="services">
+<section className="py-20 bg-white border-t border-b border-gray-500" id="services">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="mb-16">
       <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
         SERVICES
       </h2>
       <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-        Empower your business with customizable solutions.
+        Empower your business with customizable solutions. Virtual Support, Real Results.
       </p>
     </div>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -549,7 +549,7 @@ const LandingPage = () => {
 
 
       {/* Mission & Vision Section */}
-      <section className="py-20 bg-white border-t border-b border-gray-300" id="mission">
+      <section className="py-20 bg-white border-t border-b border-gray-500" id="mission">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="border border-gray-300 p-8 bg-white transform rotate-1">

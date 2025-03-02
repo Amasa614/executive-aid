@@ -288,11 +288,11 @@ const LandingPage = () => {
           </h3>
 
           {[
-            "Buried under piles of paperwork and administrative tasks, you're struggling to keep up with the demands of your growing business.",
-            "Struggling to keep up with scheduling and appointments, you're missing out on valuable opportunities to grow your business.",
-            "While spending hours managing emails and correspondence, you start to notice how it pulls your focus away from strategic planning and the bigger picture.",
-            "With so much time spent on data entry and document organization, you feel overwhelmed and unable to scale your business effectively.",
-            "Caught between marketing, customer support, and operations, you become stretched too thin to provide the quality service your clients deserve"
+            "Buried under piles of paperwork and administrative tasks.",
+            "Struggling to keep up with scheduling and appointments.",
+            "Spending hours managing emails and correspondence.",
+            "Wrestling with data entry and document organization.",
+            "Finding it hard to focus on your core goals or revenue generation"
           ].map((desc, index) => (
             <div key={index} className="flex items-start">
               <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">

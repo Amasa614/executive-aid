@@ -220,31 +220,31 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section inspired by Image 1 */}
-      <header className="bg-gray-800 py-20 border-b-4 border-black relative">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="md:flex md:justify-between md:items-center">
-            <div className="md:w-3/5 mb-10 md:mb-0 text-white">
-              <div className="mb-8">
-                <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tighter leading-none">GROW YOUR BUSINESS WITH A VIRTUAL ASSISTANT</h1>
-                <p className="text-xl mb-8 border-l-4 border-amber-600 pl-4">
-                  FULLY TRAINED VIRTUAL ASSISTANTS FOR BUSINESSES & PROFESSIONALS
-                </p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
-                  <button className="bg-amber-600 text-white px-8 py-3 font-bold hover:bg-amber-700 transition border-2 border-amber-600">
-                    Hire a Virtual Assistant
-                  </button>
-                </div>
+        <header className="bg-gray-800 py-20 border-b-4 border-black relative">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="md:flex md:justify-between md:items-center">
+          <div className="md:w-3/5 mb-10 md:mb-0 text-white">
+            <div className="mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tighter leading-none">GROW YOUR BUSINESS WITH A VIRTUAL ASSISTANT</h1>
+              <p className="text-xl mb-8 border-l-4 border-amber-600 pl-4">
+            FULLY TRAINED VIRTUAL ASSISTANTS FOR BUSINESSES & PROFESSIONALS
+              </p>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
+            <a href="#cta" className="bg-amber-600 text-white px-8 py-3 font-bold hover:bg-amber-700 transition border-2 border-amber-600 text-center">
+              Hire a Virtual Assistant
+            </a>
               </div>
             </div>
-            <div className="md:w-2/5 border-4 border-black bg-white transform -rotate-2">
-              <HeroForm />
           </div>
+          <div className="md:w-2/5 border-4 border-black bg-white transform -rotate-2">
+            <HeroForm />
+            </div>
+            </div>
           </div>
-        </div>
-      </header>
-      
-      {/* Business Owner Types Section */}
+        </header>
+        
+        {/* Business Owner Types Section */}
 {/* Business Owner Types Section */}
 <section className="py-16 bg-white border-b-4 border-black">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -436,7 +436,7 @@ const LandingPage = () => {
               <div className="text-black mb-4">
                 <Clock size={48} className="stroke-2" />
               </div>
-              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">PROJECT MANAGEMENT</h3>
+              <h3 className="text-2xl font-bold text-black mb-2 tracking-tight">PROJECT & EVENT MANAGEMENT</h3>
               <p className="text-black">
               We oversee project planning, execution, and delivery, ensuring milestones are met on time and within budget.
               </p>

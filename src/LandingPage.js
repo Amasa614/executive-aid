@@ -624,7 +624,7 @@ const LandingPage = () => {
 
 
       {/* CTA - brutalist style */}
-      <section className="py-20 bg-amber-600 text-white border-b-4 border-black">
+      <section className="py-20 bg-amber-600 text-white border-b-4 border-black" id="cta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:flex md:justify-between md:items-center">
             <div className="md:w-2/3 mb-8 md:mb-0">

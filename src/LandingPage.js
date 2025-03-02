@@ -261,48 +261,54 @@ const LandingPage = () => {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
       <h2 className="text-4xl font-bold text-black mb-6 inline-block">
-        Envision your business one year from today <span className="text-amber-600">What do you see?</span>
+        Envision your business one year from today, <span className="text-amber-600">What do you see?</span>
       </h2>
     </div>
 
     <div className="md:flex items-stretch">
       
-     {/* Image Container */}
-        <div className="md:w-2/5 flex">
-          <div className="border-4 border-black w-full h-full">
-            <img 
-          src="/images/fraustrated-owner.png" 
-          alt="Frustrated business owner" 
-          className="w-full h-full object-cover"
-            />
-          </div>
+      {/* Image Container */}
+      <div className="md:w-2/5 flex">
+        <div className="border-4 border-black w-full h-full">
+          <img 
+            src="/images/fraustrated-owner.png" 
+            alt="Frustrated business owner" 
+            className="w-full h-full object-cover"
+          />
         </div>
+      </div>
 
-        {/* Text Container */}
-        <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
-          <div className="space-y-6">
-            {[
-          "Buried under piles of paperwork and administrative tasks, you're struggling to keep up with the demands of your growing business.",
-          "Struggling to keep up with scheduling and appointments, you're missing out on valuable opportunities to grow your business.",
-          "While spending hours managing emails and correspondence, you start to notice how it pulls your focus away from strategic planning and the bigger picture.",
-          "With so much time spent on data entry and document organization, you feel overwhelmed and unable to scale your business effectively.",
-          "Caught between marketing, customer support, and operations, you become stretched too thin to provide the quality service your clients deserve"
-            ].map((desc, index) => (
-          <div key={index} className="flex items-start">
-            <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-              </svg>
+      {/* Text Container */}
+      <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
+        <div className="space-y-6">
+          
+          {/* Adding "Are you still;" */}
+          <h3 className="text-2xl font-semibold text-gray-800">
+            Are you still;
+          </h3>
+
+          {[
+            "Buried under piles of paperwork and administrative tasks, you're struggling to keep up with the demands of your growing business.",
+            "Struggling to keep up with scheduling and appointments, you're missing out on valuable opportunities to grow your business.",
+            "While spending hours managing emails and correspondence, you start to notice how it pulls your focus away from strategic planning and the bigger picture.",
+            "With so much time spent on data entry and document organization, you feel overwhelmed and unable to scale your business effectively.",
+            "Caught between marketing, customer support, and operations, you become stretched too thin to provide the quality service your clients deserve"
+          ].map((desc, index) => (
+            <div key={index} className="flex items-start">
+              <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <p className="text-gray-700">{desc}</p>
             </div>
-            <p className="text-gray-700">{desc}</p>
-          </div>
-            ))}
-          </div>
+          ))}
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-          </div>
-        </div>
-      </section>
 
 
 

@@ -250,7 +250,7 @@ const LandingPage = () => {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
       <h2 className="text-4xl font-bold text-black mb-6 inline-block">
-        Are you one of these <span className="text-amber-600">Business</span> owners?
+        Are you one of these <span className="text-amber-600">Businesses?</span>
       </h2>
     </div>
 

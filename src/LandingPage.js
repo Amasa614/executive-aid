@@ -203,23 +203,25 @@ const LandingPage = () => {
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">SERVICES</a>
-              <a href="#how-it-works" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">PROCESS</a>
-              <a href="#mission" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">MISSION</a>
-              <a href="#faq" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">FAQ</a>
-            </div>
+                  <div className="hidden md:flex space-x-8">
+                    <a href="#services" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">SERVICES</a>
+                    <a href="#how-it-works" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">PROCESS</a>
+                    <a href="#mission" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">MISSION</a>
+                    <a href="#faq" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">FAQ</a>
+                  </div>
 
-            {/* Contact Button */}
-            <button className="bg-amber-600 text-white px-6 py-2 font-bold hover:bg-black transition border-2 border-black">
-              CONTACT
-            </button>
+                  {/* Contact Button */}
+                  <a href="#cta">
+                    <button className="bg-amber-600 text-white px-6 py-2 font-bold hover:bg-black transition border-2 border-black">
+                    CONTACT
+                    </button>
+                  </a>
 
-          </div>
-        </div>
-      </nav>
+                  </div>
+                </div>
+                </nav>
 
-      {/* Hero Section inspired by Image 1 */}
+                {/* Hero Section inspired by Image 1 */}
         <header className="bg-gray-800 py-20 border-b-4 border-black relative">
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

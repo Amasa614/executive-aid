@@ -562,57 +562,57 @@ const LandingPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50" id="faq">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
-              FAQ
+        <section className="py-20 bg-indigo-900 text-white" id="faq">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-16">
+          <h2 className="text-5xl font-bold text-white mb-4 tracking-tighter inline-block bg-indigo-800 px-4 py-2 transform -rotate-1">
+            FAQ
+          </h2>
+          <p className="text-xl text-gray-200 max-w-3xl border-l-4 border-white pl-4">
+            Everything you need to know about working with ExecutiveAid.
+          </p>
+            </div>
+            <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div key={index} className="border border-gray-300">
+              <button 
+            className="w-full p-6 flex justify-between items-center text-left font-bold text-xl bg-indigo-800 hover:bg-indigo-700 transition"
+            onClick={() => toggleFaq(index)}
+              >
+            <span className="text-white">{faq.question}</span>
+            {openFaq === index ? <Minus size={24} className="text-white" /> : <Plus size={24} className="text-white" />}
+              </button>
+              {openFaq === index && (
+            <div className="p-6 bg-indigo-800 border-t border-gray-300">
+              <p className="text-lg text-gray-200">{faq.answer}</p>
+            </div>
+              )}
+            </div>
+          ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-indigo-900 text-white border-t border-b border-gray-700" id="cta">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="md:flex md:justify-between md:items-center">
+          <div className="md:w-2/3 mb-8 md:mb-0">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">
+              READY TO RECLAIM YOUR TIME?
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-              Everything you need to know about working with ExecutiveAid.
+            <p className="text-xl">
+              Join executives worldwide who rely on ExecutiveAid as their trusted partner to handle the details while they drive their success.
             </p>
           </div>
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-300">
-                <button 
-                  className="w-full p-6 flex justify-between items-center text-left font-bold text-xl bg-gray-50 hover:bg-gray-100 transition"
-                  onClick={() => toggleFaq(index)}
-                >
-                  <span className="text-gray-900">{faq.question}</span>
-                  {openFaq === index ? <Minus size={24} className="text-indigo-900" /> : <Plus size={24} className="text-indigo-900" />}
-                </button>
-                {openFaq === index && (
-                  <div className="p-6 bg-gray-50 border-t border-gray-300">
-                    <p className="text-lg text-gray-700">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="md:w-1/3">
+            <CTAForm />
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-indigo-900 text-white border-t border-b border-gray-300" id="cta">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:flex md:justify-between md:items-center">
-            <div className="md:w-2/3 mb-8 md:mb-0">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tighter">
-                READY TO RECLAIM YOUR TIME?
-              </h2>
-              <p className="text-xl">
-                Join executives worldwide who rely on ExecutiveAid as their trusted partner to handle the details while they drive their success.
-              </p>
-            </div>
-            <div className="md:w-1/3">
-              <CTAForm />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
+        {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">

@@ -255,59 +255,60 @@ const LandingPage = () => {
           </div>
         </header>
         
-        {/* Business Owner Types Section */}
-{/* Business Owner Types Section */}
-<section className="py-16 bg-white border-b-4 border-black">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-12">
-      <h2 className="text-4xl font-bold text-black mb-6 inline-block">
-        Envision your business one year from today, <span className="text-amber-600">What do you see?</span>
-      </h2>
-    </div>
-
-    <div className="md:flex items-stretch">
-      
-      {/* Image Container */}
-      <div className="md:w-2/5 flex">
-        <div className="border-4 border-black w-full h-full">
-          <img 
-            src="/images/fraustrated-owner.png" 
-            alt="Frustrated business owner" 
-            className="w-full h-full object-cover"
-          />
+        
+    {/* Business Owner Types Section */}
+    <section className="py-16 bg-white border-b-4 border-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-black mb-6 inline-block">
+            Envision your business one year from today, <span className="text-amber-600">What do you see?</span>
+          </h2>
         </div>
-      </div>
 
-      {/* Text Container */}
-      <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
-        <div className="space-y-6">
+        <div className="md:flex items-stretch">
           
-          {/* Adding "Are you still;" */}
-          <h3 className="text-2xl font-semibold text-gray-800">
-            Are you still;
-          </h3>
-
-          {[
-            "Buried under piles of paperwork and administrative tasks.",
-            "Struggling to keep up with scheduling and appointments.",
-            "Spending hours managing emails and correspondence.",
-            "Wrestling with data entry and document organization.",
-            "Finding it hard to focus on your core goals or revenue generation"
-          ].map((desc, index) => (
-            <div key={index} className="flex items-start">
-              <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <p className="text-gray-700">{desc}</p>
+          {/* Image Container */}
+          <div className="md:w-2/5 flex items-stretch">
+            <div className="border-4 border-black w-full h-auto flex">
+              <img 
+                src="/images/fraustrated-owner.png" 
+                alt="Frustrated business owner" 
+                className="w-full h-full object-cover"
+              />
             </div>
-          ))}
+          </div>
+
+          {/* Text Container */}
+          <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
+            <div className="space-y-6">
+              
+              {/* Adding "Are you still;" */}
+              <h3 className="text-2xl font-semibold text-gray-800">
+                Are you still;
+              </h3>
+
+              {[
+                "Buried under piles of paperwork and administrative tasks.",
+                "Struggling to keep up with scheduling and appointments.",
+                "Spending hours managing emails and correspondence.",
+                "Wrestling with data entry and document organization.",
+                " Finding it hard to focus on your core goals or revenue generation"
+              ].map((desc, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="bg-amber-600 text-white rounded-full p-1 mt-1 mr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-gray-700">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
 
 
 

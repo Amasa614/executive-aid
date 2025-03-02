@@ -364,7 +364,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-            <div className="border border-gray-300 bg-white p-8">
+            <div className="border border-gray-500 bg-white p-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
                 What we provide:
               </h3>
@@ -585,7 +585,7 @@ const LandingPage = () => {
           </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-300">
+              <div key={index} className="border border-gray-500">
                 <button 
                   className="w-full p-6 flex justify-between items-center text-left font-bold text-xl bg-gray-50 hover:bg-gray-100 transition"
                   onClick={() => toggleFaq(index)}
@@ -625,7 +625,7 @@ const LandingPage = () => {
 
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-gray-900 text-gray-500 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>

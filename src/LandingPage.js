@@ -415,87 +415,88 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-white border-t border-b border-gray-300" id="services">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
-              SERVICES
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-              Empower your business with customizable solutions.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="border border-gray-300 p-8 hover:bg-gray-50 transition">
-              <div className="text-gray-900 mb-4">
-                <Calendar size={48} className="stroke-2" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
-                EMAIL & CALENDAR MANAGEMENT
-              </h3>
-              <p className="text-gray-700">
-                We handle scheduling, meeting coordination, and ensure you never miss an important appointment.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-8 hover:bg-gray-50 transition">
-              <div className="text-gray-900 mb-4">
-                <Megaphone size={48} className="stroke-2" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
-                SOCIAL MEDIA MANAGEMENT & MARKETING
-              </h3>
-              <p className="text-gray-700">
-                Strategic content creation, audience engagement, and analytics-driven campaigns to boost your online presence.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-8 hover:bg-gray-50 transition">
-              <div className="text-gray-900 mb-4">
-                <BarChart size={48} className="stroke-2" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
-                DATA ENTRY & DATABASE MANAGEMENT
-              </h3>
-              <p className="text-gray-700">
-                Accurate data input, organization, and database maintenance to keep your information structured and accessible.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-8 hover:bg-gray-50 transition">
-              <div className="text-gray-900 mb-4">
-                <Clock size={48} className="stroke-2" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
-                PROJECT & EVENT MANAGEMENT
-              </h3>
-              <p className="text-gray-700">
-                We oversee project planning, execution, and delivery, ensuring milestones are met on time and within budget.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-8 hover:bg-gray-50 transition">
-              <div className="text-gray-900 mb-4">
-                <MessageCircleMore size={48} className="stroke-2" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
-                CUSTOMER SUPPORT
-              </h3>
-              <p className="text-gray-700">
-                Professional phone handling, client communication, and first-line support for your customers.
-              </p>
-            </div>
-            <div className="border border-gray-300 bg-indigo-900 text-white p-8 hover:bg-indigo-800 transition">
-              <h3 className="text-2xl font-bold mb-2 tracking-tight flex justify-between items-start">
-                EXECUTIVE PACKAGE
-              </h3>
-              <p className="mb-4">
-                Comprehensive support including all services plus strategic assistance and priority response times.
-              </p>
-              <a href="https://www.linkedin.com" className="font-bold flex items-center">
-                LEARN MORE <ChevronRight size={16} className="ml-1" />
-              </a>
-            </div>
-          </div>
+{/* Services Section */}
+<section className="py-20 bg-white border-t border-b border-gray-300" id="services">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mb-16">
+      <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
+        SERVICES
+      </h2>
+      <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
+        Empower your business with customizable solutions.
+      </p>
+    </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
+          <Calendar size={48} className="stroke-2" />
         </div>
-      </section>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+          EMAIL & CALENDAR MANAGEMENT
+        </h3>
+        <p className="text-gray-700">
+          We handle scheduling, meeting coordination, and ensure you never miss an important appointment.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
+          <Megaphone size={48} className="stroke-2" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+          SOCIAL MEDIA MANAGEMENT & MARKETING
+        </h3>
+        <p className="text-gray-700">
+          Strategic content creation, audience engagement, and analytics-driven campaigns to boost your online presence.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
+          <BarChart size={48} className="stroke-2" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+          DATA ENTRY & DATABASE MANAGEMENT
+        </h3>
+        <p className="text-gray-700">
+          Accurate data input, organization, and database maintenance to keep your information structured and accessible.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
+          <Clock size={48} className="stroke-2" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+          PROJECT & EVENT MANAGEMENT
+        </h3>
+        <p className="text-gray-700">
+          We oversee project planning, execution, and delivery, ensuring milestones are met on time and within budget.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
+          <MessageCircleMore size={48} className="stroke-2" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+          CUSTOMER SUPPORT
+        </h3>
+        <p className="text-gray-700">
+          Professional phone handling, client communication, and first-line support for your customers.
+        </p>
+      </div>
+      <div className="border border-gray-300 bg-indigo-900 text-white p-8 transition transform duration-300 ease-in-out hover:bg-indigo-800 hover:shadow-lg hover:scale-105">
+        <h3 className="text-2xl font-bold mb-2 tracking-tight flex justify-between items-start">
+          EXECUTIVE PACKAGE
+        </h3>
+        <p className="mb-4">
+          Comprehensive support including all services plus strategic assistance and priority response times.
+        </p>
+        <a href="https://www.linkedin.com" className="font-bold flex items-center">
+          LEARN MORE <ChevronRight size={16} className="ml-1" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Process Section */}
       <section className="py-20 bg-gray-50" id="how-it-works">

@@ -19,42 +19,52 @@ const HeroForm = () => {
     <div className="bg-white p-6">
       <h3 className="text-black font-bold text-xl mb-4 border-b-2 border-black pb-2">FREE CONSULTATION</h3>
       <form onSubmit={handleSubmit}>
-        <div className="space-y-4">
-          <input 
-            type="text" 
-            name="name"
-            placeholder="NAME"
-            className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
-            required
-          />
-          <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-sm" />
-          
-          <input 
-            type="email" 
-            name="email"
-            placeholder="EMAIL"
-            className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
-            required
-          />
-          <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-600 text-sm" />
-          
-          <textarea 
-            name="message"
-            placeholder="YOUR MESSAGE"
-            rows="3"
-            className="w-full px-4 py-2 border-2 border-black font-mono text-black focus:outline-none focus:ring-2 focus:ring-black" 
-            required
-          ></textarea>
-          <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-600 text-sm" />
-          
-          <button 
-            type="submit" 
-            disabled={state.submitting}
-            className={`w-full py-2 font-bold border-2 border-black ${state.submitting ? 'bg-gray-400' : 'bg-amber-600 text-white hover:bg-black transition'}`}
-          >
-            {state.submitting ? 'SENDING...' : 'SUBMIT'}
-          </button>
-        </div>
+      <div className="space-y-4">
+        <input 
+        type="text" 
+        name="name"
+        placeholder="NAME"
+        className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
+        required
+        />
+        <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-sm" />
+        
+        <input 
+        type="email" 
+        name="email"
+        placeholder="EMAIL"
+        className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
+        required
+        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-600 text-sm" />
+        
+        <input 
+        type="tel" 
+        name="phone"
+        placeholder="PHONE (XXX-XXX-XXXX)"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        className="w-full px-4 py-2 border-2 border-black font-mono focus:outline-none focus:ring-2 focus:ring-black" 
+        required
+        />
+        <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-sm" />
+        
+        <textarea 
+        name="message"
+        placeholder="YOUR MESSAGE"
+        rows="3"
+        className="w-full px-4 py-2 border-2 border-black font-mono text-black focus:outline-none focus:ring-2 focus:ring-black" 
+        required
+        ></textarea>
+        <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-600 text-sm" />
+        
+        <button 
+        type="submit" 
+        disabled={state.submitting}
+        className={`w-full py-2 font-bold border-2 border-black ${state.submitting ? 'bg-gray-400' : 'bg-amber-600 text-white hover:bg-black transition'}`}
+        >
+        {state.submitting ? 'SENDING...' : 'SUBMIT'}
+        </button>
+      </div>
       </form>
     </div>
   );

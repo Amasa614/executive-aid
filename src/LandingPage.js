@@ -215,7 +215,7 @@ const LandingPage = () => {
                   <div className="hidden md:flex space-x-8">
                     <a href="#services" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">SERVICES</a>
                     <a href="#how-it-works" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">PROCESS</a>
-                    <a href="#mission" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">MISSION</a>
+                    <a href="#mission" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">ABOUT US</a>
                     <a href="#faq" className="text-black font-bold hover:bg-black hover:text-white px-2 transition">FAQ</a>
                   </div>
 
@@ -237,9 +237,9 @@ const LandingPage = () => {
             <div className="md:flex md:justify-between md:items-center">
           <div className="md:w-3/5 mb-10 md:mb-0 text-white">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tighter leading-none">GROW YOUR BUSINESS WITH A VIRTUAL ASSISTANT</h1>
+              <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tighter leading-none">YOU DESERVE TO ADVANCE YOUR BUSINESS</h1>
               <p className="text-xl mb-8 border-l-4 border-amber-600 pl-4">
-            FULLY TRAINED VIRTUAL ASSISTANTS FOR BUSINESSES & PROFESSIONALS
+              GROW YOUR BUSINESS WITH FULLY TRAINED VIRTUAL ASSISTANTS
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
             <a href="#cta" className="bg-amber-600 text-white px-8 py-3 font-bold hover:bg-amber-700 transition border-2 border-amber-600 text-center">
@@ -562,7 +562,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-        {/* Testimonials - brutalist style */}
+        {/* Testimonials - brutalist style *
         <section className="py-20 bg-amber-300 border-y-4 border-black" id="about">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
@@ -601,7 +601,8 @@ const LandingPage = () => {
           </div>
             </div>
           </div>
-        </section>
+        </section> 
+        */}
 
         {/* FAQ Section */}
       <section className="py-20 bg-white" id="faq">

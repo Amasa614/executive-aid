@@ -423,7 +423,8 @@ const LandingPage = () => {
         SERVICES
       </h2>
       <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-        Empower your business with customizable solutions. Virtual Support, Real Results.
+        Empower your business with customizable solutions.
+        Virtual Support, Real Results.
       </p>
     </div>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

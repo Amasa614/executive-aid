@@ -317,7 +317,7 @@ const LandingPage = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="border border-gray-300 bg-white p-8">
+            <div className="border border-gray-500 bg-white p-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
                 We help professionals and business owners who:
               </h3>
@@ -527,10 +527,10 @@ const LandingPage = () => {
           2
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-          MATCHING
+          ONBOARDING
         </h3>
         <p className="text-gray-700">
-          We match you with a dedicated VA with the skills and experience tailored to your needs.
+          Your dedicated VA is carefully selected to match your needs and seamlessly integrate into your business operations ensuring immediate value and minimal disruption.
         </p>
       </div>
       <div className="border border-gray-300 p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100">
@@ -538,10 +538,10 @@ const LandingPage = () => {
           3
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-          INTEGRATION
+          PARTNERSHIP
         </h3>
         <p className="text-gray-700">
-          Your VA integrates into your workflow with minimal disruption, providing immediate value.
+          ExecutiveAid ensures effective collaboration through continuous task execution, regular updates and providing ongoing support.
         </p>
       </div>
     </div>

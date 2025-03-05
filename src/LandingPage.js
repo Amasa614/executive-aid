@@ -329,7 +329,7 @@ const LandingPage = () => {
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    Need specialized skills their current team doesn't have
+                    Need expert support to fill in the gaps in their business operations.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -349,7 +349,7 @@ const LandingPage = () => {
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    Are spending too much time handling marketing when they should be making sales
+                    Want to prioritize generating revenue over managing marketing tasks.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -396,7 +396,7 @@ const LandingPage = () => {
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    Specialized skills in administration, marketing, business planning, and customer support
+                    Specialized skills in administration, marketing, business planning, customer support, etc.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -530,7 +530,7 @@ const LandingPage = () => {
           ONBOARDING
         </h3>
         <p className="text-gray-700">
-          Your dedicated VA is carefully selected to match your needs and seamlessly integrate into your business operations ensuring immediate value and minimal disruption.
+          Your dedicated VA is carefully selected to match your needs and seamlessly integrate into your business operations ensuring immediate value.
         </p>
       </div>
       <div className="border border-gray-300 p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100">

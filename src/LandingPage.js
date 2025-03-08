@@ -319,7 +319,7 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border border-gray-500 bg-white p-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
-                We help professionals and businesses who:
+                We assist professionals and businesses who:
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -552,8 +552,12 @@ const LandingPage = () => {
 
       {/* Mission & Vision Section */}
       <section className="py-20 bg-white border-t border-b border-gray-500" id="mission">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
+          <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
+              ABOUT US
+            </h2>
             <div className="border border-gray-300 p-8 bg-white transform rotate-1">
               <h2 className="text-4xl font-bold mb-6 tracking-tighter text-gray-900">
                 MISSION

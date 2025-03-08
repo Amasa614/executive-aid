@@ -319,7 +319,7 @@ const LandingPage = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border border-gray-500 bg-white p-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-900">
-                We help professionals and business owners who:
+                We help professionals and businesses who:
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -339,7 +339,7 @@ const LandingPage = () => {
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    Want to focus on strategy and growth, not admin tasks
+                    Want to focus on strategy and growth, not administrative tasks
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -349,7 +349,7 @@ const LandingPage = () => {
                     </svg>
                   </div>
                   <p className="text-gray-700">
-                    Want to prioritize generating revenue over managing marketing tasks.
+                    Want to prioritize generating revenue.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -423,7 +423,7 @@ const LandingPage = () => {
         SERVICES
       </h2>
       <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-        Empower your business with customizable solutions.
+        Empower your business with customizable solutions.<br/>
         Virtual Support, Real Results.
       </p>
     </div>
@@ -507,7 +507,7 @@ const LandingPage = () => {
         THE PROCESS
       </h2>
       <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-        Getting started with ExecutiveAid is simple. Brutally efficient.
+      Struggling to grow your business? Don’t give up - Try again , but this time with ExecutiveAid.
       </p>
     </div>
     <div className="grid md:grid-cols-3 gap-8">

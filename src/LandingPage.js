@@ -496,7 +496,7 @@ const LandingPage = () => {
       </div>
       <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
         <div className="text-gray-900 mb-4">
-          <ChevronsLeftRightEllipsis size={48} className="stroke-2" />
+          <ChartNoAxesCombined size={48} className="stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
         Accounting & Data Analytics

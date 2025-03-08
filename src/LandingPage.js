@@ -474,6 +474,28 @@ const LandingPage = () => {
       </div>
       <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
         <div className="text-gray-900 mb-4">
+          <Clock size={48} className="stroke-2" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+          CUSTOMER RELATIONSHIP MANAGEMENT
+        </h3>
+        <p className="text-gray-700">
+        Custom CRM solutions to streamline operations, improve customer relationships, and drive business growth.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
+          <Clock size={48} className="stroke-2" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+        Custom Web Solutions
+        </h3>
+        <p className="text-gray-700">
+        Tailored web solutions for businesses, including professional websites and eCommerce platforms to boost online presence and growth.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
           <MessageCircleMore size={48} className="stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
@@ -554,10 +576,10 @@ const LandingPage = () => {
       <section className="py-20 bg-white border-t border-b border-gray-500" id="mission">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
+        <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
               ABOUT US
             </h2>
+          <div className="grid md:grid-cols-2 gap-12">
             <div className="border border-gray-300 p-8 bg-white transform rotate-1">
               <h2 className="text-4xl font-bold mb-6 tracking-tighter text-gray-900">
                 MISSION

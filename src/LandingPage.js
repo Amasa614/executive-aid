@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus, Megaphone, MessageCircleMore } from 'lucide-react';
+import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus, Megaphone, MessageCircleMore, ChevronsLeftRightEllipsis, ChartNoAxesCombined, Database  } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 
 // Hero Form Component – used in the hero section (white card on dark hero)
@@ -474,7 +474,7 @@ const LandingPage = () => {
       </div>
       <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
         <div className="text-gray-900 mb-4">
-          <Clock size={48} className="stroke-2" />
+          <Database size={48} className="stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
           CUSTOMER RELATIONSHIP MANAGEMENT
@@ -485,13 +485,24 @@ const LandingPage = () => {
       </div>
       <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
         <div className="text-gray-900 mb-4">
-          <Clock size={48} className="stroke-2" />
+          <ChevronsLeftRightEllipsis size={48} className="stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
         Custom Web Solutions
         </h3>
         <p className="text-gray-700">
         Tailored web solutions for businesses, including professional websites and eCommerce platforms to boost online presence and growth.
+        </p>
+      </div>
+      <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
+        <div className="text-gray-900 mb-4">
+          <ChevronsLeftRightEllipsis size={48} className="stroke-2" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
+        Accounting & Data Analytics
+        </h3>
+        <p className="text-gray-700">
+        Accounting and data analytics services to optimize financial management and drive informed business decisions.
         </p>
       </div>
       <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">

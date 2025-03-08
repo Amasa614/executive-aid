@@ -507,7 +507,8 @@ const LandingPage = () => {
         THE PROCESS
       </h2>
       <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-      Struggling to grow your business? Don’t give up - Try again , but this time with ExecutiveAid.
+      Struggling to grow your business? <br/>
+      Don’t give up - Try again, but this time with ExecutiveAid.
       </p>
     </div>
     <div className="grid md:grid-cols-3 gap-8">

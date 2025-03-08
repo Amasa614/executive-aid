@@ -436,8 +436,7 @@ const LandingPage = () => {
           EMAIL & CALENDAR MANAGEMENT
         </h3>
         <p className="text-gray-700">
-          We handle scheduling, meeting coordination, and ensure you never miss an important appointment.
-        </p>
+        We handle scheduling, meeting coordination, and inbox management, ensuring you stay organized and never miss an important appointment        </p>
       </div>
       <div className="border border-gray-300 p-8 bg-white transition transform duration-300 ease-in-out hover:bg-gray-100 hover:shadow-lg hover:scale-105">
         <div className="text-gray-900 mb-4">
@@ -542,7 +541,7 @@ const LandingPage = () => {
       <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
       Struggling to grow your business? <br/>
       Don’t give up. Try again, but this time with ExecutiveAid. <br/>
-      Our process is simple, efficient, and designed to help you succeed.
+      Our process is simple, efficient, and remarkably patient.
       </p>
     </div>
     <div className="grid md:grid-cols-3 gap-8">

@@ -537,11 +537,12 @@ const LandingPage = () => {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="mb-16">
       <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform rotate-1">
-        THE PROCESS
+        OUR PROCESS
       </h2>
       <p className="text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
       Struggling to grow your business? <br/>
-      Don’t give up - Try again, but this time with ExecutiveAid.
+      Don’t give up. Try again, but this time with ExecutiveAid. <br/>
+      Our process is simple, efficient, and designed to help you succeed.
       </p>
     </div>
     <div className="grid md:grid-cols-3 gap-8">

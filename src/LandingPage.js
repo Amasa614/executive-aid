@@ -487,7 +487,7 @@ const LandingPage = () => {
           <ChevronsLeftRightEllipsis size={48} className="stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
-        Custom Web Solutions
+        CUSTOM WEB SOLUTIONS
         </h3>
         <p className="text-gray-700">
         Tailored web solutions for businesses, including professional websites and eCommerce platforms to boost online presence and growth.
@@ -498,7 +498,7 @@ const LandingPage = () => {
           <ChartNoAxesCombined size={48} className="stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2 tracking-tight">
-        Accounting & Data Analytics
+        ACCOUNTING & DATA ANALYTICS
         </h3>
         <p className="text-gray-700">
         Accounting and data analytics services to optimize financial management and drive informed business decisions.

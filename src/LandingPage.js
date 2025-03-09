@@ -553,7 +553,7 @@ const LandingPage = () => {
           CONSULTATION
         </h3>
         <p className="text-gray-700">
-          We start with a thorough needs assessment to understand your business and requirements.
+        We begin with a comprehensive needs assessment and together outline expectations, tasks, and deliverables.
         </p>
       </div>
       <div className="border border-gray-300 p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100">

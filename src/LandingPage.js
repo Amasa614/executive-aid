@@ -217,7 +217,7 @@ const LandingPage = () => {
               <span className="text-4xl font-bold tracking-tighter text-gray-900">
                 EXECUTIVE<span className="text-indigo-900">AID</span>
               </span>
-              <span className="text-sm text-gray-600 -mt-1">Efficiency redefined.</span>
+              <span className="text-sm text-gray-600 -mt-1">Efficiency Redefined.</span>
             </div>
             {/* Navigation Links */}
             <div className="hidden md:flex space-x-8">

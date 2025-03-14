@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 // Hero Form Component – used in the hero section (white card on dark hero)
 const HeroForm = () => {
-  const [state, handleSubmit] = useForm("mzzdngzj"); //Formspree form ID
+  const [state, handleSubmit] = useForm("mzzezpze"); //Formspree form ID 
   
   if (state.succeeded) {
     return (
@@ -77,7 +77,7 @@ const HeroForm = () => {
 
 // CTA Form Component – used in the call-to-action section
 const CTAForm = () => {
-  const [state, handleSubmit] = useForm("mzzdngzj"); // Your Formspree form ID
+  const [state, handleSubmit] = useForm("mzzezpze"); // Your Formspree form ID
   
   if (state.succeeded) {
     return (
@@ -139,7 +139,7 @@ const CTAForm = () => {
 
 // Footer Form Component – styled for dark footer backgrounds
 const FooterForm = () => {
-  const [state, handleSubmit] = useForm("mzzdngzj"); // Your Formspree form ID
+  const [state, handleSubmit] = useForm("mzzezpze"); // Your Formspree form ID
 
   if (state.succeeded) {
     return <p className="text-center text-gray-300">Thank you! Your message has been sent.</p>;
@@ -678,11 +678,11 @@ const LandingPage = () => {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <Mail size={16} className="mr-2" />
-                  <span>jefferyamasa@gmail.com</span>
+                  <span>support@executiveaid.org</span>
                 </li>
                 <li className="flex items-center">
                   <Phone size={16} className="mr-2" />
-                  <span>+1 (234) 567-890</span>
+                  <span>+233 (54) 102-2845</span>
                 </li>
               </ul>
             </div>

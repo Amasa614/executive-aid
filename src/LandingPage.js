@@ -193,8 +193,8 @@ const LandingPage = () => {
       answer: "Absolutely. All our virtual assistants sign strict confidentiality agreements. Your business information, client data, and proprietary processes remain completely secure."
     },
     {
-      question: "Can I change my virtual assistant if needed?",
-      answer: "Yes. While we strive to create perfect matches from the start, we understand that sometimes a different skill set or working style might be needed. We'll work with you to find the ideal VA for your needs."
+      question: "What industries do you serve?",
+      answer: "We work with businesses across various industries, including real estate, e-commerce, healthcare, beauty and startups to provide tailored virtual assistant services."
     },
     {
       question: "How quickly can my virtual assistant start?",

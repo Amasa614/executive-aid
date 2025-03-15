@@ -55,7 +55,7 @@ const HeroForm = () => {
           
           <textarea 
             name="message"
-            placeholder="YOUR MESSAGE"
+            placeholder="TELL US ABOUT YOUR BUSINESS"
             rows="3"
             className="w-full px-4 py-2 border border-gray-300 font-mono text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" 
             required

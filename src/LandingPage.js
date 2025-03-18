@@ -264,7 +264,7 @@ const LandingPage = () => {
       </header>
 
       {/* Business Owner Types Section */}
-      <section className="py-16 bg-white border-t border-b border-gray-300">
+      <section className="py-16 bg-white border-t border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6 inline-block">
@@ -309,7 +309,7 @@ const LandingPage = () => {
       </section>
 
       {/* How We Help You Section */}
-      <section className="py-16 bg-gray-50 border-t border-b border-gray-500">
+      <section className="py-16 bg-gray-50 border-t border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
@@ -416,7 +416,7 @@ const LandingPage = () => {
       </section>
 
 {/* Services Section */}
-<section className="py-20 bg-white border-t border-b border-gray-500" id="services">
+<section className="py-20 bg-white border-t border-b border-gray-200" id="services">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="mb-16">
       <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
@@ -584,7 +584,7 @@ const LandingPage = () => {
 
 
       {/* Mission & Vision Section */}
-      <section className="py-20 bg-white border-t border-b border-gray-500" id="mission">
+      <section className="py-20 bg-white border-t border-b border-gray-200" id="mission">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">

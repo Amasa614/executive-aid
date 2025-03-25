@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus, Megaphone, MessageCircleMore, ChevronsLeftRightEllipsis, ChartNoAxesCombined, Database  } from 'lucide-react';
+import { Calendar, Clock, BarChart, Mail, Phone, ChevronRight, Plus, Minus, Megaphone, MessageCircleMore, ChevronsLeftRightEllipsis, ChartNoAxesCombined, Database, Instagram, Linkedin  } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 
 // Hero Form Component – used in the hero section (white card on dark hero)

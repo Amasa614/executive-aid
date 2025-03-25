@@ -641,7 +641,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      /* CTA Section */}
         <section className="py-12 md:py-20 bg-indigo-900 text-white border-t border-b border-indigo-800" id="cta">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="md:flex md:justify-between md:items-center">
@@ -660,59 +660,71 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-gray-900 text-gray-500 py-8 md:py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          <div>
+        
+{/* Footer */}
+<footer className="bg-gray-900 text-gray-500 py-8 md:py-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      
+      {/* Brand Section */}
+      <div>
         <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tighter">
           EXECUTIVE<span className="text-indigo-900">AID</span>
         </h3>
         <p className="text-sm md:text-base">Efficiency Redefined.</p>
-        <div className="flex space-x-4 mt-4">
-          <a 
-        href="https://www.instagram.com/executiveaid/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="text-gray-500 hover:text-indigo-900 transition"
-          >
-            <Instagram className="w-6 h-6"/>
-          </a>
-          <a 
-        href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="text-gray-500 hover:text-indigo-900 transition"
-          >
-            <Linkedin className="w-6 h-6"/>
-          </a>
-        </div>
-          </div>
-          <div>
+      </div>
+      
+      {/* Contact Section */}
+      <div>
         <h4 className="font-bold mb-4 text-lg md:text-xl">CONTACT</h4>
         <ul className="space-y-2 text-sm md:text-base">
           <li className="flex items-center">
-        <Mail size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-        <span>support@executiveaid.org</span>
+            <Mail size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+            <span>support@executiveaid.org</span>
           </li>
           <li className="flex items-center">
-        <Phone size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-        <span>+233541022845</span>
+            <Phone size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+            <span>+233541022845</span>
           </li>
         </ul>
-          </div>
-          <div>
+
+        {/* Social Icons */}
+        <div className="flex space-x-4 mt-4">
+          <a
+            href="https://www.instagram.com/executiveaid/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-indigo-900 transition"
+          >
+            <Instagram className="w-6 h-6" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-indigo-900 transition"
+          >
+            <Linkedin className="w-6 h-6" />
+          </a>
+        </div>
+      </div>
+      
+      {/* Message Form */}
+      <div>
         <h4 className="font-bold mb-4 text-lg md:text-xl">SEND A MESSAGE</h4>
         <FooterForm />
-          </div>
-        </div>
-        <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-700 text-center">
-          <p>&copy; {new Date().getFullYear()} EXECUTIVEAID LTD. ALL RIGHTS RESERVED.</p>
-        </div>
-          </div>
-        </footer>
+      </div>
+    </div>
+
+    {/* Bottom Footer */}
+    <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-700 text-center">
+      <p>&copy; {new Date().getFullYear()} EXECUTIVEAID LTD. ALL RIGHTS RESERVED.</p>
+    </div>
+  </div>
+</footer>
+
           </div>
         );
-      };
+            };
 
-      export default LandingPage;
+            export default LandingPage;

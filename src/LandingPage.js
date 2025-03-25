@@ -247,7 +247,7 @@ const LandingPage = () => {
                   YOU DESERVE TO ADVANCE YOUR BUSINESS
                 </h1>
                 <p className="text-base md:text-xl mb-6 md:mb-8 border-l-4 border-indigo-900 pl-4">
-                  GROW YOUR BUSINESS WITH FULLY TRAINED VIRTUAL ASSISTANTS
+                proactive and reliable
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6 md:mt-8">
                   <a href="#cta" className="bg-white text-indigo-900 px-6 md:px-8 py-2 md:py-3 text-sm md:text-base font-bold hover:bg-gray-100 transition border border-gray-300 text-center">
@@ -522,7 +522,7 @@ const LandingPage = () => {
               <p className="text-sm md:text-base mb-4">
                 Comprehensive support including all services plus strategic assistance and priority response times.
               </p>
-              <a href="https://www.linkedin.com" className="font-bold flex items-center">
+              <a href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true" className="font-bold flex items-center">
                 LEARN MORE <ChevronRight size={14} className="ml-1 w-4 h-4 md:w-5 md:h-5" />
               </a>
             </div>
@@ -613,88 +613,106 @@ const LandingPage = () => {
       <section className="py-12 md:py-20 bg-gray-50" id="faq">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
-              FAQ
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
-              Everything you need to know about working with ExecutiveAid.
-            </p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tighter inline-block bg-gray-100 px-4 py-2 transform -rotate-1">
+          FAQ
+        </h2>
+        <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl border-l-4 border-indigo-900 pl-4">
+          Everything you need to know about working with ExecutiveAid.
+        </p>
           </div>
           <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-500">
-                <button 
-                  className="w-full p-4 md:p-6 flex justify-between items-center text-left font-bold text-base md:text-xl bg-gray-50 hover:bg-gray-100 transition"
-                  onClick={() => toggleFaq(index)}
-                >
-                  <span className="text-gray-900">{faq.question}</span>
-                  {openFaq === index ? <Minus size={20} className="text-indigo-900 w-5 h-5 md:w-6 md:h-6" /> : <Plus size={20} className="text-indigo-900 w-5 h-5 md:w-6 md:h-6" />}
-                </button>
-                {openFaq === index && (
-                  <div className="p-4 md:p-6 bg-gray-50 border-t border-gray-300">
-                    <p className="text-sm md:text-lg text-gray-700">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+        {faqs.map((faq, index) => (
+          <div key={index} className="border border-gray-500">
+            <button 
+          className="w-full p-4 md:p-6 flex justify-between items-center text-left font-bold text-base md:text-xl bg-gray-50 hover:bg-gray-100 transition"
+          onClick={() => toggleFaq(index)}
+            >
+          <span className="text-gray-900">{faq.question}</span>
+          {openFaq === index ? <Minus size={20} className="text-indigo-900 w-5 h-5 md:w-6 md:h-6" /> : <Plus size={20} className="text-indigo-900 w-5 h-5 md:w-6 md:h-6" />}
+            </button>
+            {openFaq === index && (
+          <div className="p-4 md:p-6 bg-gray-50 border-t border-gray-300">
+            <p className="text-sm md:text-lg text-gray-700">{faq.answer}</p>
+          </div>
+            )}
+          </div>
+        ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-indigo-900 text-white border-t border-b border-indigo-800" id="cta">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="md:flex md:justify-between md:items-center">
-            <div className="md:w-2/3 mb-6 md:mb-0">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter">
-                READY TO RECLAIM YOUR TIME?
-              </h2>
-              <p className="text-base md:text-xl">
-                Join executives worldwide who rely on ExecutiveAid as their trusted partner to handle the details while they drive their success.
-              </p>
-            </div>
-            <div className="md:w-1/3">
-              <CTAForm />
-            </div>
+        <section className="py-12 md:py-20 bg-indigo-900 text-white border-t border-b border-indigo-800" id="cta">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="md:flex md:justify-between md:items-center">
+          <div className="md:w-2/3 mb-6 md:mb-0">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter">
+          READY TO RECLAIM YOUR TIME?
+        </h2>
+        <p className="text-base md:text-xl">
+          Join executives worldwide who rely on ExecutiveAid as their trusted partner to handle the details while they drive their success.
+        </p>
+          </div>
+          <div className="md:w-1/3">
+        <CTAForm />
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-500 py-8 md:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tighter">
-                EXECUTIVE<span className="text-indigo-900">AID</span>
-              </h3>
-              <p className="text-sm md:text-base">Efficiency Redefined.</p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4 text-lg md:text-xl">CONTACT</h4>
-              <ul className="space-y-2 text-sm md:text-base">
-                <li className="flex items-center">
-                  <Mail size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-                  <span>support@executiveaid.org</span>
-                </li>
-                <li className="flex items-center">
-                  <Phone size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-                  <span>+233 (54) 102-2845</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4 text-lg md:text-xl">SEND A MESSAGE</h4>
-              <FooterForm />
-            </div>
           </div>
-          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-700 text-center">
-            <p>&copy; {new Date().getFullYear()} EXECUTIVEAID LTD. ALL RIGHTS RESERVED.</p>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-gray-500 py-8 md:py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div>
+        <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tighter">
+          EXECUTIVE<span className="text-indigo-900">AID</span>
+        </h3>
+        <p className="text-sm md:text-base">Efficiency Redefined.</p>
+        <div className="flex space-x-4 mt-4">
+          <a 
+        href="https://www.instagram.com/executiveaid/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-gray-500 hover:text-indigo-900 transition"
+          >
+            <Instagram className="w-6 h-6"/>
+          </a>
+          <a 
+        href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-gray-500 hover:text-indigo-900 transition"
+          >
+            <Linkedin className="w-6 h-6"/>
+          </a>
+        </div>
+          </div>
+          <div>
+        <h4 className="font-bold mb-4 text-lg md:text-xl">CONTACT</h4>
+        <ul className="space-y-2 text-sm md:text-base">
+          <li className="flex items-center">
+        <Mail size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+        <span>support@executiveaid.org</span>
+          </li>
+          <li className="flex items-center">
+        <Phone size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
+        <span>+233541022845</span>
+          </li>
+        </ul>
+          </div>
+          <div>
+        <h4 className="font-bold mb-4 text-lg md:text-xl">SEND A MESSAGE</h4>
+        <FooterForm />
           </div>
         </div>
-      </footer>
-    </div>
-  );
-};
+        <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-700 text-center">
+          <p>&copy; {new Date().getFullYear()} EXECUTIVEAID LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+          </div>
+        </footer>
+          </div>
+        );
+      };
 
-export default LandingPage;
+      export default LandingPage;

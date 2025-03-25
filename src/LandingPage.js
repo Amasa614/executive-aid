@@ -641,7 +641,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      /* CTA Section */}
+      {/* CTA Section */}
         <section className="py-12 md:py-20 bg-indigo-900 text-white border-t border-b border-indigo-800" id="cta">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="md:flex md:justify-between md:items-center">
@@ -675,7 +675,7 @@ const LandingPage = () => {
       </div>
       
       {/* Contact Section */}
-      <div>
+      <div> 
         <h4 className="font-bold mb-4 text-lg md:text-xl">CONTACT</h4>
         <ul className="space-y-2 text-sm md:text-base">
           <li className="flex items-center">
@@ -722,9 +722,8 @@ const LandingPage = () => {
     </div>
   </div>
 </footer>
+</div>
+      );
+        };
 
-          </div>
-        );
-            };
-
-            export default LandingPage;
+  export default LandingPage;

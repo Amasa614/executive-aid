@@ -247,7 +247,7 @@ const LandingPage = () => {
                   YOU DESERVE TO ADVANCE YOUR BUSINESS
                 </h1>
                 <p className="text-base md:text-xl mb-6 md:mb-8 border-l-4 border-indigo-900 pl-4">
-                proactive and reliable
+                PROACTIVE AND RELIABLE 
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6 md:mt-8">
                   <a href="#cta" className="bg-white text-indigo-900 px-6 md:px-8 py-2 md:py-3 text-sm md:text-base font-bold hover:bg-gray-100 transition border border-gray-300 text-center">

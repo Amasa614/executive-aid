@@ -522,7 +522,7 @@ const LandingPage = () => {
               <p className="text-sm md:text-base mb-4">
                 Comprehensive support including all services plus strategic assistance and priority response times.
               </p>
-              <a href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true" className="font-bold flex items-center">
+              <a href="https://wa.me/+233256108055" className="font-bold flex items-center">
                 LEARN MORE <ChevronRight size={14} className="ml-1 w-4 h-4 md:w-5 md:h-5" />
               </a>
             </div>
@@ -684,7 +684,7 @@ const LandingPage = () => {
           </li>
           <li className="flex items-center">
             <Phone size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-            <span>+233541022845</span>
+            <span>+233256108055</span>
           </li>
         </ul>
 
@@ -711,7 +711,7 @@ const LandingPage = () => {
       
       {/* Message Form */}
       <div>
-        <h4 className="font-bold mb-4 text-lg md:text-xl">SEND A MESSAGE</h4>
+        <h4 className="font-bold mb-4 text-lg md:text-xl">LEAVE A REVIEW</h4>
         <FooterForm />
       </div>
     </div>

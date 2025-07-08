@@ -2,21 +2,15 @@
 
 import { useState, useEffect } from 'react';
 import { 
-  Globe, 
   ShoppingCart, 
-  Smartphone, 
-  Zap, 
   Users, 
   BarChart3, 
   Mail, 
   Phone, 
   ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Eye, 
-  Code, 
-  Palette
+  CheckCircle
 } from 'lucide-react';
+import Link from 'next/link';
 
 // Contact Form Component
 const ContactForm = () => {
@@ -235,22 +229,22 @@ export default function WebSolutionsPage() {
           <div className="flex justify-between items-center">
             {/* Logo & Subtitle */}
             <div className="flex flex-col leading-none">
-              <a href="/" className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
+              <Link href="/" className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
                 EXECUTIVE<span className="text-indigo-900">AID</span>
-              </a>
+              </Link>
               <span className="text-xs md:text-sm text-gray-600 -mt-1">Efficiency Redefined.</span>
             </div>
             {/* Navigation Links */}
             <div className="hidden md:flex space-x-8">
-              <a href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</a>
-              <a href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</a>
+              <Link href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</Link>
+              <Link href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</Link>
             </div>
             {/* Contact Button */}
-            <a href="/">
+            <Link href="/">
               <button className="bg-indigo-900 text-white px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base font-bold hover:bg-indigo-800 transition-all duration-300 border border-indigo-900 rounded-full button-hover-glow">
                 CONTACT
               </button>
-            </a> 
+            </Link> 
           </div>
         </div>
       </nav>
@@ -703,7 +697,7 @@ export default function WebSolutionsPage() {
                 <h3 className="text-xl font-bold text-gray-900">Support & Maintenance</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Our relationship doesn't end at launch. We provide ongoing support, monitoring, and maintenance to ensure your application remains secure and up-to-date.
+                Our relationship doesn&apos;t end at launch. We provide ongoing support, monitoring, and maintenance to ensure your application remains secure and up-to-date.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center">
@@ -764,7 +758,7 @@ export default function WebSolutionsPage() {
                 Ready to Start Your Project?
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Let's discuss your vision and create a custom web solution that drives your business forward.
+                Let&apos;s discuss your vision and create a custom web solution that drives your business forward.
               </p>
               
               <div className="space-y-4">

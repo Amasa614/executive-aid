@@ -12,7 +12,7 @@ export const HeroForm = () => {
           THANK YOU!
         </h3>
         <p className="text-gray-700 my-6">
-          Your consultation request has been received. We'll contact you shortly to schedule your free session.
+          Your consultation request has been received. We&apos;ll contact you shortly to schedule your free session.
         </p>
       </div>
     );

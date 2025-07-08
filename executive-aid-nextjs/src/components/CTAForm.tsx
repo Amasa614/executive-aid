@@ -61,7 +61,7 @@ export const CTAForm = () => {
             : 'bg-indigo-900 text-white hover:bg-indigo-800 button-hover-glow'
         }`}
       >
-        {state.submitting ? 'SENDING...' : "LET'S TALK"}
+        {state.submitting ? 'SENDING...' : "LET&apos;S TALK"}
       </button>
     </form>
   );

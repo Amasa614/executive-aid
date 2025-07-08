@@ -2,23 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { 
-  Calendar, 
-  Clock, 
-  BarChart, 
   Mail, 
   Phone, 
-  ChevronRight, 
   Plus, 
   Minus, 
-  Megaphone, 
-  MessageCircleMore, 
-  ChevronsLeftRightEllipsis, 
-  ChartNoAxesCombined, 
-  Database, 
   Instagram, 
   Linkedin,
   CheckCircle,
-  Crown,
   BarChart3,
   Users,
   Globe
@@ -27,6 +17,7 @@ import {
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { HeroForm } from '@/components/HeroForm';
 import { FooterForm } from '@/components/FooterForm';
+import Link from 'next/link';
 
 interface FAQ {
   question: string;
@@ -39,12 +30,8 @@ export default function LandingPage() {
   
   // Scroll animation hooks for different sections
   const [heroRef, heroVisible] = useScrollAnimation();
-  const [helpSectionRef, helpSectionVisible] = useScrollAnimation();
   const [helpCard1Ref, helpCard1Visible] = useScrollAnimation();
   const [helpCard2Ref, helpCard2Visible] = useScrollAnimation();
-  const [service1Ref, service1Visible] = useScrollAnimation();
-  const [service2Ref, service2Visible] = useScrollAnimation();
-  const [service3Ref, service3Visible] = useScrollAnimation();
 
   // Handle scroll effect for navigation
   useEffect(() => {
@@ -246,8 +233,8 @@ export default function LandingPage() {
             </div>
             {/* Navigation Links */}
             <div className="hidden md:flex space-x-8">
-              <a href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</a>
-              <a href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</a>
+              <Link href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</Link>
+              <Link href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</Link>
             </div>
             {/* Contact Button */}
             <a href="#cta">
@@ -553,7 +540,7 @@ export default function LandingPage() {
               Our Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Struggling to grow your business? Don't give up. Try again, but this time with ExecutiveAid. Our process is simple, efficient, and remarkably patient.
+              Struggling to grow your business? Don&apos;t give up. Try again, but this time with ExecutiveAid. Our process is simple, efficient, and remarkably patient.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

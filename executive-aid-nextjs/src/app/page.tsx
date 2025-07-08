@@ -248,15 +248,23 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative py-12 md:py-20" style={{
-        backgroundImage: "url('/images/person-office-work-day.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        minHeight: '70vh',
-      }}>
-        <div className="absolute inset-0 bg-black opacity-60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="relative py-12 md:py-20 min-h-[70vh] overflow-hidden">
+        {/* Optimized Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/person-office-work-day.jpg"
+            alt="Professional office environment"
+            fill
+            className="object-cover"
+            priority
+            quality={75}
+            sizes="100vw"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+          />
+        </div>
+        <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="md:flex md:justify-between md:items-center">
             <div ref={heroRef} className={`md:w-3/5 mb-6 md:mb-8 text-white transition-all duration-1000 ${heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <div className="mb-8">

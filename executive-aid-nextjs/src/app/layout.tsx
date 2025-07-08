@@ -23,6 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/person-office-work-day.jpg"
+          fetchPriority="high"
+        />
+      </head>
       <body className={`${inter.className} font-mono`}>
         {children}
       </body>

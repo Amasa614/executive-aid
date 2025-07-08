@@ -18,6 +18,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { HeroForm } from '@/components/HeroForm';
 import { FooterForm } from '@/components/FooterForm';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface FAQ {
   question: string;
@@ -293,9 +294,11 @@ export default function LandingPage() {
             {/* Image Container */}
             <div className="md:w-2/5 flex items-stretch">
               <div className="border border-gray-300 w-full h-auto flex">
-                <img 
+                <Image 
                   src="/images/fraustrated-owner.png" 
                   alt="Frustrated business owner" 
+                  width={500}
+                  height={400}
                   className="w-full h-full object-cover"
                 />
               </div>

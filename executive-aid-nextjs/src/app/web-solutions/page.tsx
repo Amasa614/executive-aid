@@ -11,6 +11,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Contact Form Component
 const ContactForm = () => {
@@ -375,9 +376,11 @@ export default function WebSolutionsPage() {
               <div className="order-1 lg:order-2">
                 <div className="relative">
                   <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl p-4">
-                    <img 
+                    <Image 
                       src="/images/razorbill IMS.png" 
                       alt="Razorbill CRM Dashboard Screenshot" 
+                      width={600}
+                      height={400}
                       className="w-full h-auto object-contain rounded-lg"
                     />
                   </div>
@@ -397,9 +400,11 @@ export default function WebSolutionsPage() {
                 <div className="order-1">
                   <div className="relative">
                     <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl p-4">
-                      <img 
+                      <Image 
                         src="/images/razorbill IMS.png" 
                         alt="Razorbill Inventory Management System Screenshot" 
+                        width={600}
+                        height={400}
                         className="w-full h-auto object-contain rounded-lg"
                       />
                     </div>
@@ -551,9 +556,11 @@ export default function WebSolutionsPage() {
               <div className="order-1 lg:order-2">
                 <div className="relative">
                   <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl p-4">
-                    <img 
+                    <Image 
                       src="/images/nepakie screenshot.png" 
                       alt="Nepakie E-commerce Platform Screenshot" 
+                      width={600}
+                      height={400}
                       className="w-full h-auto object-contain rounded-lg"
                     />
                   </div>

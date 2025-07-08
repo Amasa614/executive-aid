@@ -9,7 +9,7 @@ export const CTAForm = () => {
     return (
       <div className="text-center p-6 bg-white shadow-md rounded-2xl">
         <h3 className="font-bold text-xl mb-2 text-indigo-900">THANK YOU!</h3>
-        <p className="text-gray-700">We'll be in touch with you shortly.</p>
+        <p className="text-gray-700">We&apos;ll be in touch with you shortly.</p>
       </div>
     );
   }

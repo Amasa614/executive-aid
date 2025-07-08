@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# ExecutiveAid - Deployment Configuration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the ExecutiveAid website with deployment configuration pointing to the Next.js version.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+```
+ExecutiveAid/
+├── executive-aid/          # Original React app (deprecated)
+├── executive-aid-nextjs/   # New Next.js + TypeScript app (ACTIVE)
+├── vercel.json            # Vercel deployment configuration
+├── netlify.toml          # Netlify deployment configuration
+└── package.json          # Root deployment scripts
+```
 
-### `npm start`
+## 🚀 Deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The deployment is configured to use the **Next.js version** in the `executive-aid-nextjs/` directory.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Quick Deploy
 
-### `npm test`
+#### Option 1: Vercel (Recommended)
+1. Connect your repository to Vercel
+2. The `vercel.json` file will automatically configure the deployment
+3. Deploy automatically
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Option 2: Netlify
+1. Connect your repository to Netlify
+2. The `netlify.toml` file will configure the build settings
+3. Deploy automatically
 
-### `npm run build`
+#### Option 3: Manual Build
+```bash
+# Install dependencies
+npm run install-deps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Build for production
+npm run build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Start production server (for testing)
+npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Development
 
-### `npm run eject`
+To work on the Next.js version:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# Navigate to the Next.js directory
+cd executive-aid-nextjs
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start development server
+npm run dev
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 Active Project
 
-## Learn More
+**Current deployment points to**: `executive-aid-nextjs/`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This directory contains:
+- Next.js 15 with TypeScript
+- Tailwind CSS styling
+- Optimized images and assets
+- Contact forms with Formspree
+- Responsive design
+- SEO optimizations
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔧 Configuration Files
 
-### Code Splitting
+- `vercel.json` - Vercel deployment settings
+- `netlify.toml` - Netlify deployment settings
+- `executive-aid-nextjs/next.config.ts` - Next.js configuration with static export
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 Notes
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The original React app in `executive-aid/` is kept for reference but is not deployed
+- All deployment commands automatically target the Next.js version
+- Static export is enabled for maximum compatibility with hosting platforms 

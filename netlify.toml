@@ -1,0 +1,12 @@
+[build]
+  command = "cd executive-aid-nextjs && npm install && npm run build"
+  publish = "executive-aid-nextjs/out"
+  base = "/"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 

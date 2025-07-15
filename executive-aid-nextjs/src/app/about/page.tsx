@@ -103,7 +103,7 @@ export default function AboutPage() {
   const teamMembers: TeamMember[] = [
     {
       name: "Emmanuel Mprah",
-      role: "Chief Executive Officer",
+      role: "Chief Executive Officer", 
       image: "",
       skills: ["Business Strategy", "Operations Management", "Leadership"]
     },

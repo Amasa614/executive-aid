@@ -13,9 +13,7 @@ import {
   Award,
   Users,
   Target,
-  Heart,
-  Briefcase,
-  GraduationCap
+  Heart
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';

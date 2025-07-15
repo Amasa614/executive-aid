@@ -7,13 +7,11 @@ import {
   BarChart3, 
   Mail, 
   Phone, 
-  ArrowRight, 
   CheckCircle,
   Instagram,
   Linkedin,
   MessageCircle,
   Twitter,
-  Briefcase,
   Calendar
 } from 'lucide-react';
 import Link from 'next/link';

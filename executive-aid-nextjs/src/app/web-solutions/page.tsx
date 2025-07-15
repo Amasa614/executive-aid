@@ -8,7 +8,13 @@ import {
   Mail, 
   Phone, 
   ArrowRight, 
-  CheckCircle
+  CheckCircle,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  Twitter,
+  Briefcase,
+  Calendar
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -213,6 +219,20 @@ export default function WebSolutionsPage() {
       technologies: ['Next.js', 'Stripe', 'MongoDB', 'Tailwind CSS'],
       status: 'Live Production',
       icon: <ShoppingCart className="w-8 h-8" />
+    },
+    {
+      id: 4,
+      title: 'Appointment Booking Platform',
+      description: 'An efficient appointment booking system for businesses to manage schedules and client bookings.',
+      features: [
+        'Real-time Scheduling',
+        'Client Management',
+        'Automated Reminders',
+        'Calendar Integration'
+      ],
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js'],
+      status: 'Live Production',
+      icon: <Calendar className="w-8 h-8" />
     }
   ];
 
@@ -238,6 +258,8 @@ export default function WebSolutionsPage() {
             {/* Navigation Links */}
             <div className="hidden md:flex space-x-8">
               <Link href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</Link>
+              <Link href="/about" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">ABOUT</Link>
+              <Link href="/services" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">SERVICES</Link>
               <Link href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</Link>
             </div>
             {/* Contact Button */}
@@ -276,7 +298,7 @@ export default function WebSolutionsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
-              <div className="text-4xl font-bold text-indigo-900 mb-2">3</div>
+              <div className="text-4xl font-bold text-indigo-900 mb-2">4</div>
               <div className="text-gray-600">Live Production Systems</div>
             </div>
             <div className="p-6">
@@ -309,6 +331,7 @@ export default function WebSolutionsPage() {
               {/* Content */}
               <div className="order-2 lg:order-1">
                 <div className="mb-6">
+                  <Image src="/images/Razorbill_512.png" alt="Razorbill Logo" width={100} height={100} className="mb-4" />
                   <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
                     Razorbill CRM:
                   </h1>
@@ -365,10 +388,6 @@ export default function WebSolutionsPage() {
                   <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
                     ✓ Live Production
                   </span>
-                  <button className="px-6 py-3 bg-indigo-900 text-white rounded-full font-bold hover:bg-indigo-800 transition-all duration-300 flex items-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </div>
               
@@ -417,8 +436,9 @@ export default function WebSolutionsPage() {
                 {/* Content */}
                 <div className="order-2">
                   <div className="mb-6">
+                    <Image src="/images/Razorbill_512.png" alt="Razorbill Logo" width={100} height={100} className="mb-4" />
                     <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                      Razorbill Inventory:
+                      Razorbill Inventory Management:
                     </h1>
                     <h2 className="text-2xl md:text-3xl text-gray-600 font-light">
                       Advanced Stock Management Solution
@@ -473,10 +493,6 @@ export default function WebSolutionsPage() {
                     <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
                       ✓ Live Production
                     </span>
-                    <button className="px-6 py-3 bg-indigo-900 text-white rounded-full font-bold hover:bg-indigo-800 transition-all duration-300 flex items-center">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
                   </div>
                 </div>
               </div>
@@ -545,10 +561,6 @@ export default function WebSolutionsPage() {
                   <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
                     ✓ Live Production
                   </span>
-                  <button className="px-6 py-3 bg-indigo-900 text-white rounded-full font-bold hover:bg-indigo-800 transition-all duration-300 flex items-center">
-                    Visit Store
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </div>
               
@@ -571,190 +583,93 @@ export default function WebSolutionsPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* How We Work Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              How We Work
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              ExecutiveAid follows a comprehensive development process to ensure your project is delivered on time, within budget, and exceeds expectations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Step 1 - Discovery */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">
-                  01
+          {/* Project 4 - Custom Business Application */}
+          <div className="mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div className="order-2 lg:order-1">
+                <div className="mb-6">
+                  <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Appointment Booking Platform:
+                  </h1>
+                  <h2 className="text-2xl md:text-3xl text-gray-600 font-light">
+                    Streamline Your Business Appointments
+                  </h2>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Discovery</h3>
-              </div>
-              <p className="text-gray-700 mb-4">
-                We start by understanding your business goals, target audience, and technical requirements. Through detailed consultations, we analyze your needs and define the project scope.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Requirements analysis
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Technology stack selection
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Timeline & cost estimation
-                </li>
-              </ul>
-            </div>
-
-            {/* Step 2 - Design */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">
-                  02
+                
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  This appointment booking platform allows businesses to manage schedules efficiently, handle client bookings, send automated reminders, and integrate with calendars for seamless operations.
+                </p>
+                
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {webSolutions[3].technologies.map((tech, index) => (
+                      <span key={index} className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Design</h3>
-              </div>
-              <p className="text-gray-700 mb-4">
-                Our UX/UI design team creates wireframes and prototypes that prioritize user experience and visual appeal. We ensure your application is both functional and beautiful.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Wireframing & prototyping
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  User interface design
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Mobile responsiveness
-                </li>
-              </ul>
-            </div>
 
-            {/* Step 3 - Development */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">
-                  03
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <strong>Real-time Scheduling:</strong> Book and manage appointments in real-time.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <strong>Client Management:</strong> Maintain client profiles and booking history.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <strong>Automated Reminders:</strong> Send email/SMS reminders to reduce no-shows.
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <strong>Calendar Integration:</strong> Sync with Google Calendar and other tools.
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Development</h3>
-              </div>
-              <p className="text-gray-700 mb-4">
-                Using Agile methodology, we build your application in short sprints. This ensures continuous progress, regular feedback, and the ability to adapt to changing requirements.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Agile development process
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Regular progress updates
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Quality assurance testing
-                </li>
-              </ul>
-            </div>
 
-            {/* Step 4 - Testing & Launch */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">
-                  04
+                <div className="flex items-center space-x-4">
+                  <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
+                    ✓ Live Production
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Testing & Launch</h3>
               </div>
-              <p className="text-gray-700 mb-4">
-                Before going live, we conduct comprehensive testing to ensure your application is bug-free, secure, and performs optimally across all devices and browsers.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Cross-browser testing
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Security assessment
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Production deployment
-                </li>
-              </ul>
-            </div>
-
-            {/* Step 5 - Support & Maintenance */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">
-                  05
+              
+              {/* Image */}
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl p-4">
+                    <Image 
+                      src="/images/business-app.png" 
+                      alt="Custom Business Application Screenshot" 
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 bg-white rounded-lg p-3 shadow-lg">
+                    <div className="text-sm text-gray-600">Application Dashboard</div>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Support & Maintenance</h3>
               </div>
-              <p className="text-gray-700 mb-4">
-                Our relationship doesn&apos;t end at launch. We provide ongoing support, monitoring, and maintenance to ensure your application remains secure and up-to-date.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  24/7 monitoring
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Regular updates
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Feature enhancements
-                </li>
-              </ul>
-            </div>
-
-            {/* Step 6 - Growth & Scaling */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl mr-4">
-                  06
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Growth & Scaling</h3>
-              </div>
-              <p className="text-gray-700 mb-4">
-                As your business grows, we help scale your applications to handle increased traffic, add new features, and integrate with additional systems.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Performance optimization
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  Feature expansion
-                </li>
-                <li className="flex items-center">
-                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                  System integrations
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </section>
-
-
-
-
 
       {/* Contact Section */}
       <section id="contact" className="py-16 md:py-24 bg-white">
@@ -801,37 +716,72 @@ export default function WebSolutionsPage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">
                 EXECUTIVE<span className="text-indigo-400">AID</span>
               </h3>
               <p className="text-gray-400">
-                Custom web solutions that drive business growth and success.
+                Professional virtual assistant services that transform businesses and drive success.
               </p>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
+                <li><Link href="/about#team" className="hover:text-white transition">Our Team</Link></li>
+                <li><Link href="/about#mission" className="hover:text-white transition">Mission & Vision</Link></li>
+              </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Business Websites</a></li>
-                <li><a href="#" className="hover:text-white transition">E-commerce Solutions</a></li>
-                <li><a href="#" className="hover:text-white transition">Web Applications</a></li>
-                <li><a href="#" className="hover:text-white transition">Mobile Apps</a></li>
+                <li><Link href="/services" className="hover:text-white transition">All Services</Link></li>
+                <li><Link href="/web-solutions" className="hover:text-white transition">Web Solutions</Link></li>
+                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>support@executiveaid.org</li>
-                <li>+233256108055</li>
+                <li className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <a href="mailto:support@executiveaid.org" className="hover:text-white transition">
+                    support@executiveaid.org
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <a href="tel:+233256108055" className="hover:text-white transition">
+                    +233256108055
+                  </a>
+                </li>
               </ul>
+
+              {/* Social Icons */}
+              <div className="flex space-x-4 mt-4">
+                <a href="https://www.instagram.com/executiveaid/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://wa.me/233256108055" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <MessageCircle className="w-5 h-5" />
+                </a>
+                <a href="https://twitter.com/executiveaidltd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <Twitter className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} ExecutiveAid Ltd. All rights reserved.</p>
+            <p>Powered by Razorbill Technologies</p>
           </div>
         </div>
       </footer>

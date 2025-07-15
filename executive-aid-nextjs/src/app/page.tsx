@@ -4,30 +4,26 @@ import { useState, useEffect } from 'react';
 import { 
   Mail, 
   Phone, 
-  Plus, 
-  Minus, 
   Instagram, 
   Linkedin,
   CheckCircle,
   BarChart3,
   Users,
-  Globe
+  Globe,
+  MessageCircle,
+  Twitter
 } from 'lucide-react';
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { HeroForm } from '@/components/HeroForm';
 import { FooterForm } from '@/components/FooterForm';
+import { HireVAModal } from '@/components/HireVAModal';
 import Link from 'next/link';
 import Image from 'next/image';
 
-interface FAQ {
-  question: string;
-  answer: string;
-}
-
 export default function LandingPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   // Scroll animation hooks for different sections
   const [heroRef, heroVisible] = useScrollAnimation();
@@ -183,37 +179,6 @@ export default function LandingPage() {
       document.head.removeChild(style);
     };
   }, []);
-  
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-  
-  const faqs: FAQ[] = [
-    {
-      question: "What exactly does a virtual assistant do?",
-      answer: "A virtual assistant provides remote administrative, technical, or creative assistance to clients. At ExecutiveAid, our VAs handle tasks like email management, scheduling, research, customer support, and more, allowing you to focus on growing your business."
-    },
-    {
-      question: "How do I communicate with my virtual assistant?",
-      answer: "Communication happens through your preferred channels—email, phone, video calls, or project management tools. We adapt to your existing workflows to ensure seamless integration."
-    },
-    {
-      question: "Is my business information kept confidential?",
-      answer: "Absolutely. All our virtual assistants sign strict confidentiality agreements. Your business information, client data, and proprietary processes remain completely secure."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We work with businesses across various industries, including real estate, e-commerce, healthcare, beauty and startups to provide tailored virtual assistant services."
-    },
-    {
-      question: "How quickly can my virtual assistant start?",
-      answer: "Most of our virtual assistants can begin within 1-3 business days after the initial consultation and matching process is complete."
-    },
-    {
-      question: "What hours do your virtual assistants work?",
-      answer: "Our VAs can adapt to your timezone and preferred working hours. We offer flexible scheduling to ensure support when you need it most."
-    }
-  ];
 
   return (
     <div className="font-mono">
@@ -235,6 +200,8 @@ export default function LandingPage() {
             {/* Navigation Links */}
             <div className="hidden md:flex space-x-8">
               <Link href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</Link>
+              <Link href="/about" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">ABOUT</Link>
+              <Link href="/services" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">SERVICES</Link>
               <Link href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</Link>
             </div>
             {/* Contact Button */}
@@ -260,7 +227,7 @@ export default function LandingPage() {
             quality={75}
             sizes="100vw"
             placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxAAPwCdABmX/9k="
           />
         </div>
         <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
@@ -275,9 +242,12 @@ export default function LandingPage() {
                   GROW YOUR BUSINESS WITH PROACTIVE AND RELIABLE VIRTUAL ASSISTANTS
                 </p>
                 <div className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6 md:mt-8 transition-all duration-1000 delay-600 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                  <a href="#cta" className="bg-white text-indigo-900 px-6 md:px-8 py-2 md:py-3 text-sm md:text-base font-bold hover:bg-gray-100 transition-all duration-300 border border-gray-300 text-center rounded-full button-hover-glow">
+                  <button 
+                    onClick={() => setIsModalOpen(true)}
+                    className="bg-white text-indigo-900 px-6 md:px-8 py-2 md:py-3 text-sm md:text-base font-bold hover:bg-gray-100 transition-all duration-300 border border-gray-300 text-center rounded-full button-hover-glow"
+                  >
                     Hire a Virtual Assistant
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -295,7 +265,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 inline-block">
-              Envision your business one year from today, <span className="text-indigo-900">What do you see?</span>
+              Envision your business one year from today.<br />
+              <span className="text-indigo-900">Will you have the clarity to pivot?</span><br />
+              <span className="text-indigo-900">Will you know what&apos;s working — and what&apos;s not?</span>
             </h2>
           </div>
           <div className="md:flex items-stretch">
@@ -314,13 +286,13 @@ export default function LandingPage() {
             {/* Text Container */}
             <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
               <div className="space-y-6">
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">Are you still;</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">Or... let me guess:</h3>
                 {[
-                  "Buried under piles of paperwork and administrative tasks.",
-                  "Struggling to keep up with scheduling and appointments.",
-                  "Spending hours managing emails and correspondence.",
-                  "Wrestling with data entry and document organization.",
-                  "Finding it hard to focus on your core goals or revenue generation"
+                  "Still drowning in day-to-day chaos?",
+                  "Buried under paperwork and time-sucking admin tasks?",
+                  "Drowning in emails, chasing appointments, and constantly losing track of your schedule?",
+                  "Wasting hours managing inventory, client lists, and back-and-forth messages instead of letting automation do the heavy lifting?",
+                  "Wrestling with accounting, budgeting, and messy spreadsheets instead of making confident financial decisions?"
                 ].map((desc, index) => (
                   <div key={index} className="flex items-start">
                     <div className="bg-indigo-900 text-white rounded-full p-1 mt-1 mr-3">
@@ -455,12 +427,12 @@ export default function LandingPage() {
               Services We Offer
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From simple websites to complex web applications, we provide comprehensive development services tailored to your business needs.
+              With ready-to-work skilled human and technology resources, we provide seamless, high-impact support across business, administrative, and marketing functions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Business Support */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
+            <Link href="/services#business-support" className="bg-gray-50 rounded-2xl p-8 card-hover-effect block transition-all duration-300 hover:shadow-lg hover:scale-105">
               <div className="mb-6">
                 <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <BarChart3 className="w-6 h-6" />
@@ -483,11 +455,15 @@ export default function LandingPage() {
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                   Basic financial management
                 </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Research and data analytics
+                </li>
               </ul>
-            </div>
+            </Link>
 
             {/* Administrative Assistance */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
+            <Link href="/services#administrative-assistance" className="bg-gray-50 rounded-2xl p-8 card-hover-effect block transition-all duration-300 hover:shadow-lg hover:scale-105">
               <div className="mb-6">
                 <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <Users className="w-6 h-6" />
@@ -510,11 +486,15 @@ export default function LandingPage() {
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                   Email management
                 </li>
+                <li className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                  Data entry
+                </li>
               </ul>
-            </div>
+            </Link>
 
             {/* Marketing Assistance */}
-            <div className="bg-gray-50 rounded-2xl p-8 card-hover-effect">
+            <Link href="/services#marketing-assistance" className="bg-gray-50 rounded-2xl p-8 card-hover-effect block transition-all duration-300 hover:shadow-lg hover:scale-105">
               <div className="mb-6">
                 <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <Globe className="w-6 h-6" />
@@ -538,7 +518,18 @@ export default function LandingPage() {
                   Brand engagement and growth
                 </li>
               </ul>
-            </div>
+            </Link>
+          </div>
+          <div className="text-center mt-16">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
+              Our tailor-made solutions ensure streamlined operations and peak efficiency, enabling businesses to tap into skilled professionals and advanced technology, no matter where they&apos;re located.
+            </p>
+            <Link href="/services" className="inline-flex items-center bg-indigo-900 text-white px-8 py-3 font-bold rounded-full hover:bg-indigo-800 transition-all duration-300">
+              Learn More About Our Services
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -592,133 +583,107 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-12 md:py-20 bg-white border-t border-b border-gray-100" id="mission">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              About Us
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Learn more about our mission to empower businesses through exceptional virtual assistant services and our vision for the future.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <div className="border border-gray-300 p-6 md:p-8 bg-white rounded-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tighter text-gray-900">
-                MISSION
-              </h2>
-              <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
-                At ExecutiveAid, we aim to empower businesses and professionals through customized, top-notch administrative and executive support. We are dedicated to redefining efficiency and giving our clients the time they need to focus on their core business goals.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-6 md:p-8 bg-white rounded-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tighter text-gray-900">
-                VISION
-              </h2>
-              <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
-                We strive to be a trusted partner in the growth of businesses, offering dependable virtual assistance that helps businesses and professionals focus on what truly drives their success while we take care of the details.
-              </p>
-            </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-indigo-900 text-white" id="cta">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Join hundreds of satisfied clients who have streamlined their operations and boosted productivity with ExecutiveAid&apos;s virtual assistant services.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300"
+            >
+              Hire a Virtual Assistant
+            </button>
+            <Link href="/about" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
+              Learn More About Us
+            </Link>
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <section className="py-12 md:py-20 bg-gray-50" id="faq">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to know about working with ExecutiveAid. Find answers to common questions about our services and processes.
-            </p>
-          </div>
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-500">
-                <button 
-                  className="w-full p-4 md:p-6 flex justify-between items-center text-left font-bold text-base md:text-xl bg-gray-50 hover:bg-gray-100 transition"
-                  onClick={() => toggleFaq(index)}
-                >
-                  <span className="text-gray-900">{faq.question}</span>
-                  {openFaq === index ? <Minus size={20} className="text-indigo-900 w-5 h-5 md:w-6 md:h-6" /> : <Plus size={20} className="text-indigo-900 w-5 h-5 md:w-6 md:h-6" />}
-                </button>
-                {openFaq === index && (
-                  <div className="p-4 md:p-6 bg-gray-50 border-t border-gray-300">
-                    <p className="text-sm md:text-lg text-gray-700">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-500 py-8 md:py-12">
+      <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            
-            {/* Brand Section */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4 tracking-tighter">
-                EXECUTIVE<span className="text-indigo-900">AID</span>
+              <h3 className="text-xl font-bold mb-4">
+                EXECUTIVE<span className="text-indigo-400">AID</span>
               </h3>
-              <p className="text-sm md:text-base">Efficiency Redefined.</p>
+              <p className="text-gray-400">
+                Professional virtual assistant services that transform businesses and drive success.
+              </p>
             </div>
             
-            {/* Contact Section */}
-            <div> 
-              <h4 className="font-bold mb-4 text-lg md:text-xl">CONTACT</h4>
-              <ul className="space-y-2 text-sm md:text-base">
+            <div>
+              <h4 className="font-bold mb-4">Company</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
+                <li><Link href="/about#team" className="hover:text-white transition">Our Team</Link></li>
+                <li><Link href="/about#mission" className="hover:text-white transition">Mission & Vision</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/services" className="hover:text-white transition">All Services</Link></li>
+                <li><Link href="/web-solutions" className="hover:text-white transition">Web Solutions</Link></li>
+                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Contact</h4>
+              <ul className="space-y-2 text-gray-400">
                 <li className="flex items-center">
-                  <Mail size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-                  <span>support@executiveaid.org</span>
+                  <Mail className="w-4 h-4 mr-2" />
+                  <a href="mailto:support@executiveaid.org" className="hover:text-white transition">
+                    support@executiveaid.org
+                  </a>
                 </li>
                 <li className="flex items-center">
-                  <Phone size={14} className="mr-2 w-4 h-4 md:w-5 md:h-5" />
-                  <span>+233256108055</span>
+                  <Phone className="w-4 h-4 mr-2" />
+                  <a href="tel:+233256108055" className="hover:text-white transition">
+                    +233256108055
+                  </a>
                 </li>
               </ul>
 
               {/* Social Icons */}
               <div className="flex space-x-4 mt-4">
-                <a
-                  href="https://www.instagram.com/executiveaid/"
-          target="_blank"
-          rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-indigo-900 transition"
-                >
-                  <Instagram className="w-6 h-6" />
-        </a>
-        <a
-                  href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true"
-          target="_blank"
-          rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-indigo-900 transition"
-                >
-                  <Linkedin className="w-6 h-6" />
+                <a href="https://www.instagram.com/executiveaid/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="https://www.linkedin.com/company/executiveaid/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://wa.me/233256108055" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <MessageCircle className="w-5 h-5" />
+                </a>
+                <a href="https://twitter.com/executiveaidltd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
-            
-            {/* Message Form */}
-            <div>
-              <h4 className="font-bold mb-4 text-lg md:text-xl">LEAVE A REVIEW</h4>
-              <FooterForm />
-            </div>
           </div>
-
-          {/* Bottom Footer */}
-          <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-gray-700 text-center">
-            <p>&copy; {new Date().getFullYear()} EXECUTIVEAID LTD. ALL RIGHTS RESERVED.</p>
+          
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} ExecutiveAid Ltd. All rights reserved.</p>
+            <p>Powered by Razorbill Technologies</p>
           </div>
         </div>
       </footer>
+
+      {/* Hire VA Modal */}
+      <HireVAModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 }

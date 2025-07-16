@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://executiveaid.org/sitemap.xml
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+
+# Allow all pages to be indexed
+Allow: /about
+Allow: /services
+Allow: /web-solutions 

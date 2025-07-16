@@ -19,6 +19,24 @@ import { HeroForm } from '@/components/HeroForm';
 import { HireVAModal } from '@/components/HireVAModal';
 import Link from 'next/link';
 import Image from 'next/image';
+import Navigation from '@/components/Navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'ExecutiveAid - Professional Virtual Assistant Services',
+  description: 'Empower your business with professional virtual assistant services. We provide administrative support, digital marketing, web development, and financial management.',
+  keywords: 'virtual assistant, executive support, business assistance, remote work, productivity, administrative services, digital marketing, web development',
+  authors: [{ name: 'ExecutiveAid' }],
+  openGraph: {
+    title: 'ExecutiveAid - Professional Virtual Assistant Services',
+    description: 'Empower your business with professional virtual assistant services. We provide administrative support, digital marketing, web development, and financial management.',
+    url: 'https://executiveaid.org',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://executiveaid.org',
+  },
+};
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -182,36 +200,7 @@ export default function LandingPage() {
   return (
     <div className="font-mono">
       {/* Navigation */}
-      <nav className={`sticky top-0 z-50 transition-all duration-300 py-4 md:py-6 ${
-        isScrolled 
-          ? 'backdrop-blur-xl bg-white/20 border-b border-white/20 shadow-lg' 
-          : 'backdrop-blur-md bg-white/80 border-b border-gray-300/50'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            {/* Logo & Subtitle */}
-            <div className="flex flex-col leading-none">
-              <span className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
-                EXECUTIVE<span className="text-indigo-900">AID</span>
-              </span>
-              <span className="text-xs md:text-sm text-gray-600 -mt-1">Efficiency Redefined.</span>
-            </div>
-            {/* Navigation Links */}
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</Link>
-              <Link href="/about" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">ABOUT</Link>
-              <Link href="/services" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">SERVICES</Link>
-              <Link href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</Link>
-            </div>
-            {/* Contact Button */}
-            <a href="#cta">
-              <button className="bg-indigo-900 text-white px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base font-bold hover:bg-indigo-800 transition-all duration-300 border border-indigo-900 rounded-full button-hover-glow">
-                CONTACT
-              </button>
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navigation isScrolled={isScrolled} currentPage="/" contactLink="#cta" />
 
       {/* Hero Section */}
       <header className="relative py-12 md:py-20 min-h-[70vh] overflow-hidden">

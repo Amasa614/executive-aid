@@ -12,10 +12,28 @@ import {
   Linkedin,
   MessageCircle,
   Twitter,
-  Calendar
+  Calendar,
+  Globe
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Navigation from '@/components/Navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Web Solutions Portfolio - ExecutiveAid',
+  description: 'Explore our live production systems: Razorbill CRM, Inventory Management, Nepakie Professional Website, and Appointment Booking Platform.',
+  keywords: 'web development portfolio, CRM system, inventory management, professional website, appointment booking, live production systems',
+  openGraph: {
+    title: 'Web Solutions Portfolio - ExecutiveAid',
+    description: 'Explore our live production systems: Razorbill CRM, Inventory Management, Nepakie Professional Website, and Appointment Booking Platform.',
+    url: 'https://executiveaid.org/web-solutions',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://executiveaid.org/web-solutions',
+  },
+};
 
 // Contact Form Component
 const ContactForm = () => {
@@ -178,7 +196,6 @@ export default function WebSolutionsPage() {
         'Integration Capabilities',
         'Mobile Responsive Design'
       ],
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Express.js'],
       status: 'Live Production',
       icon: <Users className="w-8 h-8" />
     },
@@ -196,27 +213,25 @@ export default function WebSolutionsPage() {
         'Supplier Management',
         'Detailed Reporting'
       ],
-      technologies: ['Vue.js', 'Python', 'MySQL', 'Flask'],
       status: 'Live Production',
       icon: <BarChart3 className="w-8 h-8" />
     },
     {
       id: 3,
-      title: 'Nepakie Shower Gel E-commerce',
-      description: 'A modern, user-friendly e-commerce platform for Nepakie shower gel products, featuring secure payments, inventory management, and customer engagement tools.',
+      title: 'Nepakie Shower Gel',
+      description: 'A modern, professional website for Nepakie business, featuring responsive design, content management, and optimized user experience.',
       features: [
-        'Product Catalog',
-        'Shopping Cart & Checkout',
-        'Secure Payment Gateway',
-        'Order Management',
-        'Customer Accounts',
-        'Inventory Integration',
+        'Professional Design',
+        'Content Management',
+        'Responsive Layout',
+        'Contact Forms',
+        'Service Showcase',
+        'About Company',
         'Mobile Optimization',
         'SEO Optimization'
       ],
-      technologies: ['Next.js', 'Stripe', 'MongoDB', 'Tailwind CSS'],
       status: 'Live Production',
-      icon: <ShoppingCart className="w-8 h-8" />
+      icon: <Globe className="w-8 h-8" />
     },
     {
       id: 4,
@@ -228,7 +243,6 @@ export default function WebSolutionsPage() {
         'Automated Reminders',
         'Calendar Integration'
       ],
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express.js'],
       status: 'Live Production',
       icon: <Calendar className="w-8 h-8" />
     }
@@ -238,37 +252,8 @@ export default function WebSolutionsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation - Inherited from main page */}
-      <nav className={`sticky top-0 z-50 transition-all duration-300 py-4 md:py-6 ${
-        isScrolled 
-          ? 'backdrop-blur-xl bg-white/20 border-b border-white/20 shadow-lg' 
-          : 'backdrop-blur-md bg-white/80 border-b border-gray-300/50'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            {/* Logo & Subtitle */}
-            <div className="flex flex-col leading-none">
-              <Link href="/" className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
-                EXECUTIVE<span className="text-indigo-900">AID</span>
-              </Link>
-              <span className="text-xs md:text-sm text-gray-600 -mt-1">Efficiency Redefined.</span>
-            </div>
-            {/* Navigation Links */}
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</Link>
-              <Link href="/about" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">ABOUT</Link>
-              <Link href="/services" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">SERVICES</Link>
-              <Link href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</Link>
-            </div>
-            {/* Contact Button */}
-            <Link href="/">
-              <button className="bg-indigo-900 text-white px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base font-bold hover:bg-indigo-800 transition-all duration-300 border border-indigo-900 rounded-full button-hover-glow">
-                CONTACT
-              </button>
-            </Link> 
-          </div>
-        </div>
-      </nav>
+      {/* Navigation */}
+      <Navigation isScrolled={isScrolled} currentPage="/web-solutions" contactLink="/" />
 
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gray-900 text-white"> {/* bg-gray-900 text-white */}
@@ -344,9 +329,9 @@ export default function WebSolutionsPage() {
                 
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {webSolutions[0].technologies.map((tech, index) => (
+                    {webSolutions[0].features.map((feature, index) => (
                       <span key={index} className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full">
-                        {tech}
+                        {feature}
                       </span>
                     ))}
                   </div>
@@ -449,9 +434,9 @@ export default function WebSolutionsPage() {
                   
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {webSolutions[1].technologies.map((tech, index) => (
+                      {webSolutions[1].features.map((feature, index) => (
                         <span key={index} className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full">
-                          {tech}
+                          {feature}
                         </span>
                       ))}
                     </div>
@@ -504,22 +489,22 @@ export default function WebSolutionsPage() {
               <div className="order-2 lg:order-1">
                 <div className="mb-6">
                   <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Nepakie E-commerce:
+                    Nepakie Shower Gel:
                   </h1>
                   <h2 className="text-2xl md:text-3xl text-gray-600 font-light">
-                    Premium Shower Gel Online Store
+                    Professional Business Website
                   </h2>
                 </div>
                 
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Nepakie E-commerce is a modern, user-friendly online platform designed specifically for Nepakie shower gel products. The platform features secure payment processing, intelligent inventory management, and engaging customer experience tools that drive sales and build brand loyalty.
+                  Nepakie Professional Website is a modern, user-friendly online platform designed to showcase Nepakie's business services and products. The platform features professional design, content management capabilities, and optimized user experience to effectively communicate the brand's value proposition.
                 </p>
                 
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {webSolutions[2].technologies.map((tech, index) => (
+                    {webSolutions[2].features.map((feature, index) => (
                       <span key={index} className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full">
-                        {tech}
+                        {feature}
                       </span>
                     ))}
                   </div>
@@ -531,19 +516,19 @@ export default function WebSolutionsPage() {
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <strong>Product Showcase:</strong> Beautiful product galleries with detailed descriptions and specifications.
+                        <strong>Professional Design:</strong> Clean, modern design that reflects the brand's professionalism and quality.
                       </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <strong>Secure Checkout:</strong> Integrated Stripe payment gateway with multiple payment options.
+                        <strong>Content Management:</strong> Easy-to-update content management system for maintaining fresh information.
                       </div>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <strong>Order Management:</strong> Complete order tracking from purchase to delivery.
+                        <strong>Service Showcase:</strong> Comprehensive display of services and business offerings.
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -568,14 +553,14 @@ export default function WebSolutionsPage() {
                   <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl p-4">
                     <Image 
                       src="/images/nepakie screenshot.png" 
-                      alt="Nepakie E-commerce Platform Screenshot" 
+                      alt="Nepakie Professional Website Screenshot" 
                       width={600}
                       height={400}
                       className="w-full h-auto object-contain rounded-lg"
                     />
                   </div>
                   <div className="absolute -bottom-4 -right-4 bg-white rounded-lg p-3 shadow-lg">
-                    <div className="text-sm text-gray-600">E-commerce Platform</div>
+                    <div className="text-sm text-gray-600">Professional Website</div>
                   </div>
                 </div>
               </div>
@@ -602,9 +587,9 @@ export default function WebSolutionsPage() {
                 
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {webSolutions[3].technologies.map((tech, index) => (
+                    {webSolutions[3].features.map((feature, index) => (
                       <span key={index} className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full">
-                        {tech}
+                        {feature}
                       </span>
                     ))}
                   </div>

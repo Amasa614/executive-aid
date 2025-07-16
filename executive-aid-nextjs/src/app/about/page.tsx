@@ -17,6 +17,23 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Navigation from '@/components/Navigation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About ExecutiveAid - Virtual Assistant Leadership Team',
+  description: 'Learn about ExecutiveAid\'s mission, vision, and leadership team. Meet our CEO Ebo Mprah, CTO Jeffery Crentsil, and CFO Winston Sackey.',
+  keywords: 'ExecutiveAid about, virtual assistant company, Ghana, Accra, VA in Ghana, leadership team, CEO, CTO, CFO, mission, vision, values',
+  openGraph: {
+    title: 'About ExecutiveAid - Virtual Assistant Leadership Team',
+    description: 'Learn about ExecutiveAid\'s mission, vision, and leadership team. Meet our CEO Ebo Mprah, CTO Jeffery Crentsil, and CFO Winston Sackey.',
+    url: 'https://executiveaid.org/about',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://executiveaid.org/about',
+  },
+};
 
 interface FAQ {
   question: string;
@@ -53,24 +70,8 @@ export default function AboutPage() {
       answer: "A virtual assistant provides remote administrative, technical, or creative assistance to clients. At ExecutiveAid, our VAs handle tasks like email management, scheduling, research, customer support, and more, allowing you to focus on growing your business."
     },
     {
-      question: "How do I communicate with my virtual assistant?",
-      answer: "Communication happens through your preferred channels—email, phone, video calls, or project management tools. We adapt to your existing workflows to ensure seamless integration."
-    },
-    {
-      question: "Is my business information kept confidential?",
-      answer: "Absolutely. All our virtual assistants sign strict confidentiality agreements. Your business information, client data, and proprietary processes remain completely secure."
-    },
-    {
       question: "What industries do you serve?",
       answer: "We work with businesses across various industries, including real estate, e-commerce, healthcare, beauty and startups to provide tailored virtual assistant services."
-    },
-    {
-      question: "How quickly can my virtual assistant start?",
-      answer: "Most of our virtual assistants can begin within 1-3 business days after the initial consultation and matching process is complete."
-    },
-    {
-      question: "What hours do your virtual assistants work?",
-      answer: "Our VAs can adapt to your timezone and preferred working hours. We offer flexible scheduling to ensure support when you need it most."
     },
     {
       question: "Do you provide custom web solutions and applications?",
@@ -122,36 +123,7 @@ export default function AboutPage() {
   return (
     <div className="font-mono">
       {/* Navigation */}
-      <nav className={`sticky top-0 z-50 transition-all duration-300 py-4 md:py-6 ${
-        isScrolled 
-          ? 'backdrop-blur-xl bg-white/20 border-b border-white/20 shadow-lg' 
-          : 'backdrop-blur-md bg-white/80 border-b border-gray-300/50'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            {/* Logo & Subtitle */}
-            <div className="flex flex-col leading-none">
-              <Link href="/" className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
-                EXECUTIVE<span className="text-indigo-900">AID</span>
-              </Link>
-              <span className="text-xs md:text-sm text-gray-600 -mt-1">Efficiency Redefined.</span>
-            </div>
-            {/* Navigation Links */}
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">HOME</Link>
-              <Link href="/about" className="text-sm md:text-base text-indigo-900 font-bold hover:text-indigo-900 transition">ABOUT</Link>
-              <Link href="/services" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">SERVICES</Link>
-              <Link href="/web-solutions" className="text-sm md:text-base text-gray-900 font-bold hover:text-indigo-900 transition">OUR PORTFOLIO</Link>
-            </div>
-            {/* Contact Button */}
-            <Link href="/#cta">
-              <button className="bg-indigo-900 text-white px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-base font-bold hover:bg-indigo-800 transition-all duration-300 border border-indigo-900 rounded-full">
-                CONTACT
-              </button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation isScrolled={isScrolled} currentPage="/about" contactLink="/#cta" />
 
       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gray-900 text-white">
@@ -195,7 +167,7 @@ export default function AboutPage() {
                 </h2>
               </div>
               <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
-                At ExecutiveAid, we aim to empower businesses and professionals through customized, top-notch administrative and executive support. We are dedicated to redefining efficiency and giving our clients the time they need to focus on their core business goals.
+                At ExecutiveAid, we aim to empower businesses and professionals through customized, top-notch administrative, marketing and business support. We are dedicated to redefining efficiency and giving our clients the time they need to focus on their core business goals.
               </p>
             </div>
             <div className="border border-gray-300 p-6 md:p-8 bg-white rounded-2xl">
@@ -208,7 +180,7 @@ export default function AboutPage() {
                 </h2>
               </div>
               <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
-                We strive to be a trusted partner in the growth of businesses, offering dependable virtual assistance that helps businesses and professionals focus on what truly drives their success while we take care of the details.
+                To be the driving force of human talent and technology behind ambitious leaders, fueling the growth of businesses.
               </p>
             </div>
           </div>
@@ -234,7 +206,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Growth Partnership</h3>
               <p className="text-gray-600">
-“Your growth is our mission.” We don’t just complete tasks; we work alongside you to help your business grow sustainably. We patiently guide you, support your systems, and design simple, effective solutions to save you time and drive measurable results.
+"Your growth is our mission." We don't just complete tasks; we work alongside you to help your business grow sustainably. We patiently guide you, support your systems, and design simple, effective solutions to save you time and drive measurable results.
               </p>
             </div>
             
@@ -244,7 +216,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Dependability</h3>
               <p className="text-gray-600">
-“Count on us, every time.” We show up when you need us, respond promptly, and deliver quality work consistently. Your business operations continue smoothly because you can rely on us every step of the way.
+"Count on us, every time." We show up when you need us, respond promptly, and deliver quality work consistently. Your business operations continue smoothly because you can rely on us every step of the way.
               </p>
             </div>
             
@@ -254,28 +226,59 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
               <p className="text-gray-600">
-“We deliver what we promise.” We operate with honesty, transparency, and clear communication, ensuring you can trust us fully with your business while building a relationship based on mutual respect.
+"We deliver what we promise." We operate with honesty, transparency, and clear communication, ensuring you can trust us fully with your business while building a relationship based on mutual respect.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Meet the Team Section */}
+      {/* Meet the Management Section */}
       <section className="py-16 bg-white" id="team">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Meet Our Team
+              Meet the Management
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get to know the talented professionals behind ExecutiveAid who are dedicated to your success.
+              Get to know the leadership team behind ExecutiveAid who are dedicated to your success.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+          {/* CEO - Centered at top */}
+          <div className="flex justify-center mb-12">
+            <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow max-w-md">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 mb-4">
+                  {teamMembers[0].image && (
+                    <Image
+                      src={teamMembers[0].image}
+                      alt={teamMembers[0].name}
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{teamMembers[0].name}</h3>
+                  <p className="text-indigo-900 font-semibold mb-3">{teamMembers[0].role}</p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {teamMembers[0].skills.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="px-3 py-1 bg-indigo-100 text-indigo-900 text-xs rounded-full">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTO and CFO - Below CEO */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {teamMembers.slice(1).map((member, index) => (
+              <div key={index + 1} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                   <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
                     <Image

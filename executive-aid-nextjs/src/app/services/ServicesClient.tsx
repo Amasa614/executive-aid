@@ -19,7 +19,6 @@ import {
   PenTool, 
   DollarSign,
   Clock,
-  Shield,
   Zap,
   Instagram,
   Linkedin,

@@ -2,29 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { 
-  BarChart3, 
   Users, 
-  Globe, 
   CheckCircle, 
   Phone, 
   Mail, 
-  Calendar, 
-  FileText, 
-  TrendingUp, 
-  Target, 
-  Search, 
-  Settings, 
-  Smartphone, 
   MessageCircle, 
-  PenTool, 
-  DollarSign,
-  Clock,
-  Shield,
-  Zap,
   Instagram,
   Linkedin,
-  Twitter,
-  Puzzle
+  Twitter
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -35,8 +20,6 @@ import ReviewsSection from '@/components/ReviewSection';
 export default function CredentialsClient() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImageIndex, setModalImageIndex] = useState(0);
-  const [modalImages, setModalImages] = useState<string[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,14 +30,6 @@ export default function CredentialsClient() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  
-// Images for Nepakie
-  const NepakieImages = [
-    "/images/projectmgmt1.png",
-    "/images/projectmgmt2.png",
-    "/images/projectmgmt3.png",
-    "/images/projectmgmt4.png"
-  ];
 
   // Add animations
   useEffect(() => {

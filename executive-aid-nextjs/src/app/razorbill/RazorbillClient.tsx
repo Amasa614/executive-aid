@@ -2,29 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { 
-  BarChart3, 
-  Users, 
-  Globe, 
-  CheckCircle, 
   Phone, 
   Mail, 
-  Calendar, 
-  FileText, 
-  TrendingUp, 
-  Target, 
-  Search, 
-  Settings, 
-  Smartphone, 
   MessageCircle, 
-  PenTool, 
-  DollarSign,
-  Clock,
-  Shield,
-  Zap,
   Instagram,
   Linkedin,
-  Twitter,
-  Puzzle
+  Twitter
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -34,8 +17,6 @@ import { HireVAModal } from '@/components/HireVAModal';
 export default function RazorbillClient() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalImageIndex, setModalImageIndex] = useState(0);
-  const [modalImages, setModalImages] = useState<string[]>([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,14 +27,6 @@ export default function RazorbillClient() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  
-// Images for Nepakie
-  const NepakieImages = [
-    "/images/projectmgmt1.png",
-    "/images/projectmgmt2.png",
-    "/images/projectmgmt3.png",
-    "/images/projectmgmt4.png"
-  ];
 
   // Add animations
   useEffect(() => {
@@ -94,26 +67,6 @@ export default function RazorbillClient() {
     };
   }, []);
 
-  const webSolutions = [
-    {
-      id: 1,
-      title: 'Nepakie',
-      description: 'A comprehensive Customer Relationship Management system designed to streamline business operations, manage customer interactions, and drive sales growth.',
-      features: [
-        'Custom UI/UX Design',
-        'Interactive Features',
-        'SEO & Performance Optimization',
-        'Analytics & Tracking',
-        'Professional Design',
-        'Content Management',
-        'Responsive Layout ',
-        'Maintenance & Support',
-
-      ],
-      status: 'Live Production',
-      icon: <Users className="w-8 h-8" />
-    }
-  ]
 
 
   return (

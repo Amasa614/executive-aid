@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import HomeClient from './HomeClient';
+import StructuredData from '@/components/StructuredData';
 
 export const metadata: Metadata = {
   title: 'ExecutiveAid - Hire Virtual Assistants in Ghana for Business Growth',
@@ -20,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <HomeClient />;
+  return (
+    <>
+      <StructuredData />
+      <HomeClient />
+    </>
+  );
 }

@@ -6,7 +6,6 @@ import {
   BarChart3, 
   Mail, 
   Phone, 
-  CheckCircle,
   Instagram,
   Linkedin,
   MessageCircle,

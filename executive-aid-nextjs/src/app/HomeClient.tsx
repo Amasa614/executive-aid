@@ -210,14 +210,14 @@ export default function HomeClient() {
                   YOU DESERVE TO ADVANCE YOUR <span className="text-gradient">BUSINESS</span>
                 </h1>
                 <p className={`text-base md:text-xl mb-6 md:mb-8 border-l-4 border-indigo-900 pl-4 transition-all duration-1000 delay-400 ${heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'}`}>
-                  GROW YOUR BUSINESS WITH PROACTIVE AND RELIABLE VIRTUAL ASSISTANTS
+                  GROW YOUR BUSINESS WITH  RELIABLE VIRTUAL ASSISTANTS <br /> AND SIMPLIFIED ENTERPRISE SOLUTIONS
                 </p>
                 <div className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6 md:mt-8 transition-all duration-1000 delay-600 ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                   <button 
                     onClick={() => setIsModalOpen(true)}
                     className="bg-white text-indigo-900 px-6 md:px-8 py-2 md:py-3 text-sm md:text-base font-bold hover:bg-gray-100 transition-all duration-300 border border-gray-300 text-center rounded-full button-hover-glow"
                   >
-                    Hire a Virtual Assistant
+                    Hire a VA today
                   </button>
                 </div>
               </div>
@@ -238,7 +238,7 @@ export default function HomeClient() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 inline-block">
               Envision your business one year from today.<br />
               <span className="text-indigo-900">Will you have the clarity to pivot?</span><br />
-              <span className="text-indigo-900">Will you know what&apos;s working — and what&apos;s not?</span>
+              <span className="text-indigo-900">Will you know what&apos;s working, and what&apos;s not?</span><br />
             </h2>
           </div>
           <div className="md:flex items-stretch">
@@ -246,7 +246,7 @@ export default function HomeClient() {
             <div className="md:w-2/5 flex items-stretch">
               <div className="border border-gray-300 w-full h-auto flex">
                 <Image 
-                  src="/images/fraustrated-owner.png" 
+                  src="/images/frustrated_owner2.jpg" 
                   alt="Frustrated business owner" 
                   width={500}
                   height={400}
@@ -288,7 +288,7 @@ export default function HomeClient() {
               How We Help You
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how our expert virtual assistants can transform your business operations and give you back valuable time to focus on what matters most.
+              Discover how our expert remote assistance in Ghana can transform your business operations and give you back valuable time to focus on what matters most.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
@@ -351,7 +351,7 @@ export default function HomeClient() {
                     </svg>
                   </div>
                   <p className="text-sm md:text-base text-gray-700">
-                    Pre-trained VAs who hit the ground running from day one
+                    <span className="font-bold">ERP Solutions + Skilled VAs:</span>   ERP software and trained VAs in Ghana ready to support your business from day one.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -361,7 +361,7 @@ export default function HomeClient() {
                     </svg>
                   </div>
                   <p className="text-sm md:text-base text-gray-700">
-                    Flexible support that scales with your business needs
+                    <span className="font-bold">Specialized Expertise:</span>  Specialised skills in email & calendar management, website development, digital marketing, accounting & budgeting, project management, research & data analytics, and more.
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -371,17 +371,7 @@ export default function HomeClient() {
                     </svg>
                   </div>
                   <p className="text-sm md:text-base text-gray-700">
-                    Specialized skills in administration, marketing, business planning, customer support, etc.
-                  </p>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-indigo-900 text-white rounded-full flex-shrink-0 p-1 mt-1 mr-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <p className="text-sm md:text-base text-gray-700">
-                    Cost-effective solutions that deliver real ROI
+                    <span className="font-bold">Flexible Support:</span> Flexible plans and pricing that scale with your business needs
                   </p>
                 </div>
               </div>
@@ -398,7 +388,7 @@ export default function HomeClient() {
               Services We Offer
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With ready-to-work skilled human and technology resources, we provide seamless, high-impact support across business, administrative, and marketing functions.
+              With ready-to-work professional virtual assistants and enterprise solutions, we provide seamless, high-impact support across business, administrative, and marketing functions
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -505,55 +495,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-12 md:py-20 bg-gray-50" id="how-it-works">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Process
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Struggling to grow your business? Don&apos;t give up. Try again, but this time with ExecutiveAid. Our process is simple, efficient, and remarkably patient.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="border border-gray-300 p-6 md:p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 rounded-2xl">
-              <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold rounded-2xl">
-                1
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-                CONSULTATION
-              </h3>
-              <p className="text-sm md:text-base text-gray-700">
-                We begin with a comprehensive needs assessment and together outline expectations, tasks, and deliverables.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-6 md:p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 rounded-2xl">
-              <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold rounded-2xl">
-                2
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-                ONBOARDING
-              </h3>
-              <p className="text-sm md:text-base text-gray-700">
-                Your dedicated VA is carefully selected to match your needs and seamlessly integrate into your business operations ensuring immediate value.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-6 md:p-8 relative transition transform duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:bg-gray-100 rounded-2xl">
-              <div className="absolute -top-6 -left-6 bg-indigo-900 text-white w-16 h-16 flex items-center justify-center text-3xl font-bold rounded-2xl">
-                3
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 mt-4 tracking-tight">
-                PARTNERSHIP
-              </h3>
-              <p className="text-sm md:text-base text-gray-700">
-                ExecutiveAid ensures effective collaboration through continuous task execution, regular updates and providing ongoing support.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-indigo-900 text-white" id="cta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -561,17 +502,17 @@ export default function HomeClient() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Join hundreds of satisfied clients who have streamlined their operations and boosted productivity with ExecutiveAid&apos;s virtual assistant services.
+            Join hundreds of satisfied managers and business owners in Ghana who have streamlined their operations and boosted productivity with ExecutiveAid&apos;s premium virtual assistant services and AI powered enterprise solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => setIsModalOpen(true)}
               className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300"
             >
-              Hire a Virtual Assistant
+              Hire a VA today
             </button>
-            <Link href="/about" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
-              Learn More About Us
+            <Link href="/credentials" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
+              Why Ghana&apos;s Top SMEs Trust ExecutiveAid! 
             </Link>
           </div>
         </div>
@@ -580,8 +521,15 @@ export default function HomeClient() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             <div>
+              <Image
+                src="/images/EAID-logo.jpg" 
+                alt="ExecutiveAid Logo"
+                width={60}
+                height={60}
+                className="mr-2"
+              />
               <h3 className="text-xl font-bold mb-4">
                 EXECUTIVE<span className="text-indigo-400">AID</span>
               </h3>
@@ -593,21 +541,43 @@ export default function HomeClient() {
             <div>
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="/about#team" className="hover:text-white transition">Our Team</Link></li>
+                <li><Link href="/about" className="hover:text-white transition">Who We Are</Link></li>
+                <li><Link href="/about#team" className="hover:text-white transition">Management</Link></li>
+                 <li>
+                      <a href="/about#how-it-works" className="hover:text-white transition">
+                        Our Process
+                      </a>
+                    </li>
                 <li><Link href="/about#mission" className="hover:text-white transition">Mission & Vision</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Careers</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/services" className="hover:text-white transition">All Services</Link></li>
-                <li><Link href="/web-solutions" className="hover:text-white transition">Web Solutions</Link></li>
-                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
+                <li><Link href="/web-solutions#financial-management" className="hover:text-white transition"> Financial Management</Link></li>
+                <li><Link href="/web-solutions#project-management" className="hover:text-white transition"> Project Management</Link></li>
+                <li><Link href="/web-solutions#research-and-data-analytics" className="hover:text-white transition"> Research and Data Analytics</Link></li>
+                <li><Link href="/web-solutions#calendar-management" className="hover:text-white transition"> Administrative Assistance</Link></li>
+                <li><Link href="/web-solutions#digital-marketing-campaign" className="hover:text-white transition"> Digital Marketing</Link></li>
+                <li><Link href="/web-solutions" className="hover:text-white transition">Razorbill Technologies (Custom Web Solutions)</Link></li>
+             
               </ul>
             </div>
             
+            <div>
+              <h4 className="font-bold mb-4">Resources & Policies</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Blogs/Insights</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Privacy Policy</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Data Protection Policy</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Terms & Conditions</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Cookies</Link></li>
+              </ul>
+            </div>
+
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">

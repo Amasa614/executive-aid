@@ -38,7 +38,7 @@ export const CTAForm = () => {
         type="tel" 
         name="phone"
         placeholder="PHONE NUMBER"
-        className="w-full px-3 md:px-4 py-2 md:py-3 mb-3 md:mb-4 border-2 border-gray-300 font-mono text-sm md:text-base focus:outline-none rounded-full" 
+        className="w-full px-3 md:px-4 py-2 md:py-3 mb-3 md:mb-4 border-2 border-gray-300  font-mono text-sm md:text-base focus:outline-none rounded-full" 
         required
       />
       <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-gray-500 text-xs md:text-sm mb-2 block" />

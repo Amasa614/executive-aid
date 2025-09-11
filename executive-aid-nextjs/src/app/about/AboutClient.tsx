@@ -21,7 +21,7 @@ import Navigation from '@/components/Navigation';
 
 interface FAQ {
   question: string;
-  answer: string;
+  answer: string | React.ReactNode;
 }
 
 interface TeamMember {
@@ -51,56 +51,67 @@ export default function AboutClient() {
   const faqs: FAQ[] = [
     {
       question: "What exactly does a virtual assistant do?",
-      answer: "A virtual assistant provides remote administrative, technical, or creative assistance to clients. At ExecutiveAid, our VAs handle tasks like email management, scheduling, research, customer support, and more, allowing you to focus on growing your business."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We work with businesses across various industries, including real estate, e-commerce, healthcare, beauty and startups to provide tailored virtual assistant services."
+      answer: (
+    <>
+      Absolutely! We offer comprehensive web development services and SaaS solutions under Razorbill Technologies; including CRM systems, POS, booking & reservations platforms, inventory management, and e-commerce softwares.
+      <br />
+      <Link href="/razorbill" className="text-indigo-900 font-bold underline ml-1">
+        Learn more
+      </Link>
+    </>
+  )
     },
     {
       question: "Do you provide custom web solutions and applications?",
-      answer: "Yes! We offer comprehensive web development services including custom business applications, CRM systems, inventory management platforms, and e-commerce solutions. Our portfolio includes live production systems like Razorbill CRM and Nepakie E-commerce platform."
+      answer: "Absolutely! We offer comprehensive web development services and SaaS solutions under Razorbill Technologies; including CRM systems, POS, booking & reservations platforms, inventory management, and e-commerce softwares."
+     
     },
     {
-      question: "Can your virtual assistants help with accounting and financial management?",
-      answer: "Absolutely. Our VAs can assist with basic financial management, bookkeeping, expense tracking, budget preparation, and financial reporting. We help streamline your accounting processes so you can make confident financial decisions."
+      question: "What industries do you serve?",
+      answer: "While our primary focus is on supporting underserved industries, our broad and flexible virtual assistant services are designed to meet the unique demands of a wide range of sectors, including real estate, e-commerce, healthcare, beauty, food, entertainment, pharmaceutical industries and startups of any kind."
+    },
+
+    {
+      question: "Can your VAs help with accounting and financial management?",
+      answer: "Absolutely. Our virtual assistants can support your accounting and financial management needs by handling tasks such as bookkeeping, payroll calculations, expense tracking, budget preparation, and financial reporting. We help streamline your financial processes, giving you the clarity and confidence to make informed business decisions."
     },
     {
       question: "What administrative tasks can your virtual assistants handle?",
-      answer: "Our administrative support covers calendar management, document organization, email management, data entry, appointment scheduling, travel arrangements, and general office administration. We handle the time-consuming tasks so you can focus on growing your business."
+      answer: "Calendar management, document organization, email management, data entry, scheduling, travel arrangements, and general office admin."
     },
-    {
-      question: "Do you offer marketing and social media support?",
-      answer: "Yes! We provide comprehensive marketing assistance including social media management, content creation and strategy, brand engagement, online presence optimization, and digital marketing campaigns to help grow your business."
-    },
+    
     {
       question: "Can you help with research and data analytics?",
-      answer: "Definitely. Our team excels at market research, competitor analysis, data collection and analysis, report generation, and providing actionable insights to support your business decisions and strategy development."
+      answer: "Definitely. Our team excels at conducting market research, competitor analysis, data collection, and analytics. We also assist with academic research support such as organizing sources, compiling literature, and preparing reports or presentations, providing actionable insights for both business and educational purposes."
     },
     {
       question: "What project management services do you offer?",
-      answer: "We provide end-to-end project management including project planning, task coordination, timeline management, team communication, progress tracking, and reporting. We ensure your projects stay on track and meet deadlines."
-    }
+      answer: "We provide end-to-end project management including project planning, coordination, timelines, team communication, tracking, and reporting."
+    },
+    {
+      question: "How quickly can you start working?",
+      answer: "Typically, we can get started within 3 days. Our virtual assistants are ready to go, but we take the time to fully understand your business, your workflow, and exactly how you want us to assist you. We conduct a free business clarity audit at your pace, ensuring everything aligns perfectly before diving in. With our VAs on standby, we’re ready to begin whenever you are."
+    },
   ];
 
   const teamMembers: TeamMember[] = [
     {
-      name: "Emmanuel Mprah",
-      role: "Chief Executive Officer", 
-      image: "",
-      skills: ["Business Strategy", "Operations Management", "Leadership"]
-    },
-    {
       name: "Jeffery Amasa Crentsil",
-      role: "Chief Technology Officer",
+      role: "Director, Technology",
       image: "/images/jeff.jpg",
-      skills: ["Full-Stack Development", "System Architecture", "Project Management"]
+      skills:[]
     },
     {
       name: "Winston Nene Sackey",
-      role: "Chief Financial Officer",
+      role: "Director, Finance",
       image: "/images/winston.jpg",
-      skills: ["Financial Strategy", "Budget Management", "Financial Reporting"]
+      skills: []
+    },
+    {
+      name: "Francisca Osei",
+      role: "Director, Operations",
+      image: "/images/partner.jpg", // Replace with actual image path
+      skills: []
     }
   ];
 
@@ -109,67 +120,69 @@ export default function AboutClient() {
       {/* Navigation */}
       <Navigation isScrolled={isScrolled} currentPage="/about" contactLink="/#cta" />
 
-      {/* Hero Section */}
+       {/* Hero Section */}
       <section className="py-16 md:py-24 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter">
-            About ExecutiveAid
+            About Us
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Discover the people, mission, and vision behind ExecutiveAid. Learn how we&apos;re revolutionizing virtual assistance and empowering businesses worldwide.
+            Every great journey begins with a vision. At Executive Aid, ours has always been clear; to create meaningful impact by helping businesses and individuals thrive.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#mission" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
-              Our Mission
-            </Link>
-            <Link href="#team" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
-              Meet Our Team
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="py-12 md:py-20 bg-white border-t border-b border-gray-100" id="mission">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Mission & Vision
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Learn more about our mission to empower businesses through exceptional virtual assistant services and our vision for the future.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            <div className="border border-gray-300 p-6 md:p-8 bg-white rounded-2xl">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                  <Target className="w-6 h-6" />
+      {/* Our Story Section */}
+            <section className="py-10 md:py-16 bg-white border-t border-b border-gray-200">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-8 md:mb-12">
+                  <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter text-gray-900">
+                   Our  Story<br />
+                  </h2>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
-                  MISSION
-                </h2>
-              </div>
-              <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
-                At ExecutiveAid, we aim to empower businesses and professionals through customized, top-notch administrative, marketing and business support. We are dedicated to redefining efficiency and giving our clients the time they need to focus on their core business goals.
-              </p>
-            </div>
-            <div className="border border-gray-300 p-6 md:p-8 bg-white rounded-2xl">
-              <div className="flex items-center mb-6">
-                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                  <Heart className="w-6 h-6" />
+                <div className="md:flex items-stretch">
+                  {/* Image Container */}
+                  <div className="md:w-2/5 flex flex-col items-stretch">
+                    <div className="border border-gray-300 w-full h-auto flex">
+                      <Image 
+                        src="/images/EboMprah1.jpg" 
+                        alt="CEO's picture" 
+                        width={500}
+                        height={400}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="mt-4 px-2 text-center">
+                      <p className="text-base text-gray-900 font-bold">Emmanuel Mprah</p>
+                      <p className="text-base text-gray-900">Founder & Managing Director</p>
+                    </div>
+                    </div>
+                  {/* Text Container */}
+                  <div className="md:w-3/5 md:pl-12 flex flex-col justify-center">
+                    <div className="space-y-6">
+                      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-900 mb-6 inline-block">
+                      The Story: Bridging Gaps, Unlocking Talent, Driving Growth.
+                      </h1>
+                      <p className="text-base text-gray-900">In today&apos;s fast-paced business world, we noticed a growing gap: ambitious leaders and executives were bogged down by daily tasks that distracted them from their true strengths.</p>
+                        <p className="text-base text-gray-900"> After years of working alongside small to medium-level professionals, we saw a recurring challenge; business owners were constantly overwhelmed, not because they lacked capability, but because reliable support was hard to come by.</p>
+                        <p className="text-base text-gray-900">At the same time, we noticed another issue closer to home: in many parts of Ghana, especially in rural and underserved areas and industries, finding high-value, skilled employees is extremely difficult. 
+                          Talented individuals often remain untapped due to limited access to formal job markets, while local businesses struggle to find dependable assistance.</p>
+                        <p className="text-base text-gray-900">ExecutiveAid was created to bridge both gaps; providing  efficient virtual assistance to executives and professionals while also harnessing technology to connect Ghana&apos;s skilled workforce to local and global opportunities.
+                          Today, we stand as a trusted extension of your team; supporting productivity, enabling growth, and unlocking talent across Ghana and beyond.</p>   
+                    </div>
+                  </div>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
-                  VISION
-                </h2>
+                {/* Centered Button Group */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <Link href="/" className="bg-indigo-900 text-white px-8 py-3 font-bold rounded-full hover:bg-indigo-700 transition-all duration-300">
+                  Ready to Get Started?
+                </Link>
+                <Link href="#team" className="border-2 border-indigo-900 text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-indigo-900 hover:text-white transition-all duration-300">
+                  Meet The Management
+                </Link>
               </div>
-              <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
-                To be the driving force of human talent and technology behind ambitious leaders, fueling the growth of businesses.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+              </div>
+            </section>
 
       {/* Values Section */}
       <section className="py-16 bg-gray-50">
@@ -217,6 +230,121 @@ export default function AboutClient() {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-16 md:py-24 bg-gray-50" id="how-it-works">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Process
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              How We Work: Simple, Streamlined, Seamless.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Step 1: Consultation */}
+            <div className="flex flex-col items-center bg-white rounded-3xl shadow-lg p-8 transition hover:scale-105 hover:shadow-2xl">
+              <Image
+                src="/images/consultation.jpg" // Replace with your image path
+                alt="Consultation"
+                width={220}
+                height={220}
+                className="rounded-2xl object-cover mb-6 shadow-md"
+              />
+              <div className="bg-indigo-900 text-white w-12 h-12 flex items-center justify-center text-xl font-bold rounded-full mb-4">
+                1
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+                CONSULTATION
+              </h3>
+              <p className="text-sm text-gray-700 text-center">
+                We begin with a comprehensive needs assessment and together outline expectations, tasks, and deliverables.
+              </p>
+            </div>
+            {/* Step 2: Onboarding */}
+            <div className="flex flex-col items-center bg-white rounded-3xl shadow-lg p-8 transition hover:scale-105 hover:shadow-2xl">
+              <Image
+                src="/images/onboarding.jpg" // Replace with your image path
+                alt="Onboarding"
+                width={220}
+                height={220}
+                className="rounded-2xl object-cover mb-6 shadow-md"
+              />
+              <div className="bg-indigo-900 text-white w-12 h-12 flex items-center justify-center text-xl font-bold rounded-full mb-4">
+                2
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+                ONBOARDING
+              </h3>
+              <p className="text-sm text-gray-700 text-center">
+                We match you with trained, reliable virtual assistants and enterprise solutions that integrate seamlessly with your operations.
+              </p>
+            </div>
+            {/* Step 3: Partnership */}
+            <div className="flex flex-col items-center bg-white rounded-3xl shadow-lg p-8 transition hover:scale-105 hover:shadow-2xl">
+              <Image
+                src="/images/partner.jpg" // Replace with your image path
+                alt="Partnership"
+                width={220}
+                height={220}
+                className="rounded-2xl object-cover mb-6 shadow-md"
+              />
+              <div className="bg-indigo-900 text-white w-12 h-12 flex items-center justify-center text-xl font-bold rounded-full mb-4">
+                3
+              </div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+                PARTNERSHIP
+              </h3>
+              <p className="text-sm text-gray-700 text-center">
+                We become an extension of your team, scaling support as your business grows and adapting to your evolving needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Section */}
+      <section className="py-12 md:py-20 bg-white border-t border-b border-gray-100" id="mission">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Mission & Vision
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Learn more about our mission to empower businesses through exceptional virtual assistant services and our vision for the future.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="border border-gray-300 p-6 md:p-8 bg-white rounded-2xl">
+              <div className="flex items-center mb-6">
+                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <Target className="w-6 h-6" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
+                  MISSION
+                </h2>
+              </div>
+              <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
+                At ExecutiveAid, we aim to empower businesses and professionals through customized, top-notch administrative, marketing and business support. We are dedicated to redefining efficiency and giving our clients the time they need to focus on their core business goals.
+              </p>
+            </div>
+            <div className="border border-gray-300 p-6 md:p-8 bg-white rounded-2xl">
+              <div className="flex items-center mb-6">
+                <div className="bg-indigo-900 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <Heart className="w-6 h-6" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
+                  VISION
+                </h2>
+              </div>
+              <p className="text-base md:text-xl border-l-4 border-indigo-900 pl-4 text-gray-700">
+                To be the driving force of human talent and technology behind ambitious leaders, fueling the growth of businesses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Meet the Management Section */}
       <section className="py-16 bg-white" id="team">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,46 +353,14 @@ export default function AboutClient() {
               Meet the Management
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get to know the leadership team behind ExecutiveAid who are dedicated to your success.
+              Our leadership team brings together expertise in finance, technology, and operations to deliver exceptional solutions for executives and businesses.
             </p>
           </div>
-
-          {/* CEO - Centered at top */}
-          <div className="flex justify-center mb-12">
-            <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow max-w-md">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 mb-4">
-                  {teamMembers[0].image && (
-                    <Image
-                      src={teamMembers[0].image}
-                      alt={teamMembers[0].name}
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">{teamMembers[0].name}</h3>
-                  <p className="text-indigo-900 font-semibold mb-3">{teamMembers[0].role}</p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {teamMembers[0].skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-3 py-1 bg-indigo-100 text-indigo-900 text-xs rounded-full">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTO and CFO - Below CEO */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {teamMembers.slice(1).map((member, index) => (
-              <div key={index + 1} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                  <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 mb-4">
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -273,17 +369,8 @@ export default function AboutClient() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="text-center sm:text-left">
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-indigo-900 font-semibold mb-3">{member.role}</p>
-                    <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
-                      {member.skills.map((skill, skillIndex) => (
-                        <span key={skillIndex} className="px-3 py-1 bg-indigo-100 text-indigo-900 text-xs rounded-full">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-indigo-900 font-semibold mb-3">{member.role}</p>
                 </div>
               </div>
             ))}
@@ -333,7 +420,7 @@ export default function AboutClient() {
             Join hundreds of satisfied clients who have transformed their businesses with ExecutiveAid&apos;s virtual assistant services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#cta" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
+            <Link href="/" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
               Get Started Today
             </Link>
             <Link href="/services" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
@@ -345,22 +432,16 @@ export default function AboutClient() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "ExecutiveAid",
-          "url": "https://executiveaid.org",
-          "logo": "/images/Razorbill_512.png",
-          "sameAs": ["https://www.linkedin.com/company/executiveaid", "https://www.instagram.com/executiveaid/", "https://twitter.com/executiveaidltd"],
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Accra",
-            "addressCountry": "Ghana"
-          }
-        }) }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             <div>
+              <Image
+              src="/images/EAID-logo.jpg" 
+              alt="ExecutiveAid Logo"
+              width={60}
+              height={60}
+              className="mr-2"
+                            />
               <h3 className="text-xl font-bold mb-4">
                 EXECUTIVE<span className="text-indigo-400">AID</span>
               </h3>
@@ -372,21 +453,43 @@ export default function AboutClient() {
             <div>
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="/about#team" className="hover:text-white transition">Our Team</Link></li>
+                <li><Link href="/about" className="hover:text-white transition">Who We Are</Link></li>
+                <li><Link href="/about#team" className="hover:text-white transition">Management</Link></li>
+                 <li>
+                      <a href="/about#how-it-works" className="hover:text-white transition">
+                        Our Process
+                      </a>
+                    </li>
                 <li><Link href="/about#mission" className="hover:text-white transition">Mission & Vision</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Careers</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/services" className="hover:text-white transition">All Services</Link></li>
-                <li><Link href="/web-solutions" className="hover:text-white transition">Web Solutions</Link></li>
-                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
+                <li><Link href="/web-solutions#financial-management" className="hover:text-white transition"> Financial Management</Link></li>
+                <li><Link href="/web-solutions#project-management" className="hover:text-white transition"> Project Management</Link></li>
+                <li><Link href="/web-solutions#research-and-data-analytics" className="hover:text-white transition"> Research and Data Analytics</Link></li>
+                <li><Link href="/web-solutions#calendar-management" className="hover:text-white transition"> Administrative Assistance</Link></li>
+                <li><Link href="/web-solutions#digital-marketing-campaign" className="hover:text-white transition"> Digital Marketing</Link></li>
+                <li><Link href="/web-solutions" className="hover:text-white transition">Razorbill Technologies (Custom Web Solutions)</Link></li>
+             
               </ul>
             </div>
             
+            <div>
+              <h4 className="font-bold mb-4">Resources & Policies</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Blogs/Insights</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Privacy Policy</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Data Protection Policy</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Terms & Conditions</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Cookies</Link></li>
+              </ul>
+            </div>
+
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">

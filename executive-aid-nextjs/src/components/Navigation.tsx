@@ -25,7 +25,9 @@ export default function Navigation({ isScrolled, currentPage, contactLink = "/#c
     { href: '/', label: 'HOME' },
     { href: '/about', label: 'ABOUT' },
     { href: '/services', label: 'SERVICES' },
-    { href: '/web-solutions', label: 'OUR PORTFOLIO' },
+    { href: '/web-solutions', label: ' PORTFOLIO' },
+    { href: '/credentials', label: ' CREDENTIALS' },
+    { href: '/razorbill', label: ' RAZORBILL' },
   ];
 
   return (

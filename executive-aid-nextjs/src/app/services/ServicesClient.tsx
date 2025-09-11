@@ -23,9 +23,11 @@ import {
   Zap,
   Instagram,
   Linkedin,
-  Twitter
+  Twitter,
+  Puzzle
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 
 export default function ServicesClient() {
@@ -50,17 +52,17 @@ export default function ServicesClient() {
         {
           icon: <Globe className="w-5 h-5" />,
           title: 'Custom Applications & Web Solutions',
-          description: 'Tailored software solutions, CRM systems, inventory management platforms, and e-commerce solutions built with cutting-edge technology.'
+          description: 'Tailored web development services and SaaS solutions under Razorbill Technologies; including CRM systems, POS, booking & reservations platforms, inventory management, and e-commerce softwares.'
         },
         {
           icon: <Target className="w-5 h-5" />,
           title: 'Project Management',
-          description: 'End-to-end project planning, task coordination, timeline management, team communication, and progress tracking.'
+          description: 'End-to-end project management; including planning, coordination, timelines, team communication, tracking and reporting.'
         },
         {
           icon: <DollarSign className="w-5 h-5" />,
           title: 'Financial Management',
-          description: 'Basic financial management, bookkeeping, expense tracking, budget preparation, and financial reporting.'
+          description: 'Basic financial management, bookkeeping, expense tracking, payroll calculations, budget preparation, and financial reporting.'
         },
         {
           icon: <Search className="w-5 h-5" />,
@@ -73,7 +75,7 @@ export default function ServicesClient() {
         'Improved project efficiency',
         'Better financial oversight',
         'Data-driven decision making',
-        'Custom solutions for unique needs'
+        'Custom softwares for unique needs'
       ]
     },
     {
@@ -163,11 +165,11 @@ export default function ServicesClient() {
             Comprehensive virtual assistant services designed to streamline your business operations, boost productivity, and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#cta" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
-              Get Started Today
+            <Link href="/" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
+              Get A Free Consultation Today
             </Link>
-            <Link href="#services-details" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
-              Explore Services
+            <Link href="/web-solutions" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
+              Explore Our Portfolio
             </Link>
           </div>
         </div>
@@ -198,11 +200,11 @@ export default function ServicesClient() {
             
             <div className="text-center p-6">
               <div className="bg-indigo-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8" />
+                <Puzzle className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Secure & Confidential</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Simple Setup</h3>
               <p className="text-gray-600">
-                Your business data is protected with strict confidentiality agreements and secure processes.
+               Setting up is simple: we match you with the right VA, offer flexible terms, and ensure seamless integration into your workflow.
               </p>
             </div>
             
@@ -242,7 +244,13 @@ export default function ServicesClient() {
                         {service.icon}
                       </div>
                       <div>
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{service.title}</h3>
+                        {/* Replace the h3 below with the Link */}
+                        <Link
+                          href={`/web-solutions#${service.id}`}
+                          className="text-2xl md:text-3xl font-bold text-indigo-900 hover:underline transition"
+                        >
+                          {service.title}
+                        </Link>
                       </div>
                     </div>
                     <p className="text-gray-700 mb-6 text-lg">{service.description}</p>
@@ -271,7 +279,16 @@ export default function ServicesClient() {
                             {feature.icon}
                           </div>
                           <div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
+                            <Link
+                              href={`/web-solutions#${feature.title.toLowerCase()
+                                .replace(/ & /g, ' and ')
+                                .replace(/\s+/g, '-')
+                                .replace(/[^\w-]/g, '')
+                                .replace(/-+/g, '-')}`}
+                              className="text-lg font-bold text-indigo-900 hover:underline transition mb-2 block"
+                            >
+                              {feature.title}
+                            </Link>
                             <p className="text-gray-600">{feature.description}</p>
                           </div>
                         </div>
@@ -305,11 +322,18 @@ export default function ServicesClient() {
         </div>
       </section>
 
-      {/* Footer */}
+    {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             <div>
+              <Image
+                src="/images/EAID-logo.jpg" 
+                alt="ExecutiveAid Logo"
+                width={60}
+                height={60}
+                className="mr-2"
+                />
               <h3 className="text-xl font-bold mb-4">
                 EXECUTIVE<span className="text-indigo-400">AID</span>
               </h3>
@@ -321,21 +345,43 @@ export default function ServicesClient() {
             <div>
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
-                <li><Link href="/about#team" className="hover:text-white transition">Our Team</Link></li>
+                <li><Link href="/about" className="hover:text-white transition">Who We Are</Link></li>
+                <li><Link href="/about#team" className="hover:text-white transition">Management</Link></li>
+                 <li>
+                      <a href="/about#how-it-works" className="hover:text-white transition">
+                        Our Process
+                      </a>
+                    </li>
                 <li><Link href="/about#mission" className="hover:text-white transition">Mission & Vision</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Careers</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/services" className="hover:text-white transition">All Services</Link></li>
-                <li><Link href="/web-solutions" className="hover:text-white transition">Web Solutions</Link></li>
-                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
+                <li><Link href="/web-solutions#financial-management" className="hover:text-white transition"> Financial Management</Link></li>
+                <li><Link href="/web-solutions#project-management" className="hover:text-white transition"> Project Management</Link></li>
+                <li><Link href="/web-solutions#research-and-data-analytics" className="hover:text-white transition"> Research and Data Analytics</Link></li>
+                <li><Link href="/web-solutions#calendar-management" className="hover:text-white transition"> Administrative Assistance</Link></li>
+                <li><Link href="/web-solutions#digital-marketing-campaign" className="hover:text-white transition"> Digital Marketing</Link></li>
+                <li><Link href="/web-solutions" className="hover:text-white transition">Razorbill Technologies (Custom Web Solutions)</Link></li>
+             
               </ul>
             </div>
             
+            <div>
+              <h4 className="font-bold mb-4">Resources & Policies</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Blogs/Insights</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Privacy Policy</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Data Protection Policy</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Terms & Conditions</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Cookies</Link></li>
+              </ul>
+            </div>
+
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">

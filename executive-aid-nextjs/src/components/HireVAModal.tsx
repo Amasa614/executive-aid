@@ -55,8 +55,8 @@ export const HireVAModal = ({ isOpen, onClose }: HireVAModalProps) => {
             <input 
               type="text" 
               name="name"
-              placeholder="YOUR NAME"
-              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full" 
+              placeholder="Your Name"
+              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm text-gray-600 md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full" 
               required
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-600 text-xs md:text-sm" />
@@ -64,8 +64,8 @@ export const HireVAModal = ({ isOpen, onClose }: HireVAModalProps) => {
             <input 
               type="email" 
               name="email"
-              placeholder="EMAIL ADDRESS"
-              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full" 
+              placeholder="Email Address"
+              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm text-gray-600 md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full" 
               required
             />
             <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-600 text-xs md:text-sm" />
@@ -73,15 +73,15 @@ export const HireVAModal = ({ isOpen, onClose }: HireVAModalProps) => {
             <input 
               type="tel" 
               name="phone"
-              placeholder="PHONE NUMBER"
-              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full" 
+              placeholder="Phone Number"
+              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm text-gray-600 md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full" 
               required
             />
             <ValidationError prefix="Phone" field="phone" errors={state.errors} className="text-red-600 text-xs md:text-sm" />
             
             <select
               name="service"
-              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full"
+              className="w-full px-4 py-3 border border-gray-300 font-mono text-sm text-gray-600 md:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-full"
               required
             >
               <option value="">SELECT SERVICE NEEDED</option>

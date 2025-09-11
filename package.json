@@ -9,7 +9,14 @@
     "lint": "cd executive-aid-nextjs && npm run lint",
     "install-deps": "cd executive-aid-nextjs && npm install"
   },
-  "keywords": ["nextjs", "typescript", "executive-aid"],
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "executive-aid"
+  ],
   "author": "Executive Aid",
-  "license": "ISC"
-} 
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^11.2.10"
+  }
+}

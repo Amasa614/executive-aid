@@ -571,7 +571,7 @@ export default function HomeClient() {
               <ul className="space-y-2 text-gray-400">
                 <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Blogs/Insights</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Privacy Policy</Link></li>
+                <li><Link href="/policies/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Data Protection Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Terms & Conditions</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Cookies</Link></li>

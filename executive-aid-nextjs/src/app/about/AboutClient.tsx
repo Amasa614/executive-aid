@@ -18,6 +18,7 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
+import { HireVAModal } from '@/components/HireVAModal';
 
 interface FAQ {
   question: string;
@@ -34,6 +35,7 @@ interface TeamMember {
 export default function AboutClient() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,6 +53,10 @@ export default function AboutClient() {
   const faqs: FAQ[] = [
     {
       question: "What exactly does a virtual assistant do?",
+      answer: "A virtual assistant provides remote administrative, technical, or creative assistance to clients. At ExecutiveAid, our VAs handle tasks like email and calender management, data entry, research, SaaS administration, social media management, content creation, accounting and more, allowing you to focus on growing your business. "
+    },
+    {
+      question: "Do you provide custom web solutions and applications?",
       answer: (
     <>
       Absolutely! We offer comprehensive web development services and SaaS solutions under Razorbill Technologies; including CRM systems, POS, booking & reservations platforms, inventory management, and e-commerce softwares.
@@ -59,12 +65,7 @@ export default function AboutClient() {
         Learn more
       </Link>
     </>
-  )
-    },
-    {
-      question: "Do you provide custom web solutions and applications?",
-      answer: "Absolutely! We offer comprehensive web development services and SaaS solutions under Razorbill Technologies; including CRM systems, POS, booking & reservations platforms, inventory management, and e-commerce softwares."
-     
+      )
     },
     {
       question: "What industries do you serve?",
@@ -98,7 +99,7 @@ export default function AboutClient() {
     {
       name: "Jeffery Amasa Crentsil",
       role: "Director, Technology",
-      image: "/images/jeff.jpg",
+      image: "/images/jeff1.jpg",
       skills:[]
     },
     {
@@ -110,7 +111,7 @@ export default function AboutClient() {
     {
       name: "Francisca Osei",
       role: "Director, Operations",
-      image: "/images/partner.jpg", // Replace with actual image path
+      image: "/images/profile.png", // Replace with actual image path
       skills: []
     }
   ];
@@ -360,13 +361,13 @@ export default function AboutClient() {
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 mb-4">
+                  <div className="w-72 h-72 rounded-2xl mb-4">
                     <Image
                       src={member.image}
                       alt={member.name}
-                      width={96}
-                      height={96}
-                      className="w-full h-full object-cover"
+                      width={288}
+                      height={288}
+                      className="w-full h-full object-cover rounded-2xl"
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
@@ -420,9 +421,12 @@ export default function AboutClient() {
             Join hundreds of satisfied clients who have transformed their businesses with ExecutiveAid&apos;s virtual assistant services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300"
+            >
               Get Started Today
-            </Link>
+            </button>
             <Link href="/services" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
               View Our Services
             </Link>
@@ -483,7 +487,7 @@ export default function AboutClient() {
               <ul className="space-y-2 text-gray-400">
                 <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Blogs/Insights</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Privacy Policy</Link></li>
+                <li><Link href="/policies/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Data Protection Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Terms & Conditions</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Cookies</Link></li>
@@ -531,6 +535,11 @@ export default function AboutClient() {
           </div>
         </div>
       </footer>
+      {/* Hire VA Modal */}
+      <HireVAModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        />
     </div>
   );
 } 

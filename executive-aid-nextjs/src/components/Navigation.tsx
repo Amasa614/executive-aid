@@ -36,14 +36,25 @@ export default function Navigation({ isScrolled, currentPage, contactLink = "/#c
         ? 'backdrop-blur-xl bg-white/20 border-b border-white/20 shadow-lg' 
         : 'backdrop-blur-md bg-white/80 border-b border-gray-300/50'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center">
           {/* Logo & Subtitle */}
-          <div className="flex flex-col leading-none">
+          <div className="flex items-center leading-none">
+            <Link href="/" className="mr-2 flex-shrink-0">
+              <img
+                src="/images/EAID-logo.jpg" // or your actual logo path
+                alt="ExecutiveAid Logo"
+                width={72}
+                height={72}
+                className="rounded-md"
+              />
+            </Link>
+          <div className="flex flex-col ">
             <Link href="/" className="text-3xl md:text-4xl font-bold tracking-tighter text-gray-900">
               EXECUTIVE<span className="text-indigo-900">AID</span>
             </Link>
             <span className="text-xs md:text-sm text-gray-600 -mt-1">Efficiency Redefined.</span>
+          </div>
           </div>
 
           {/* Desktop Navigation Links */}

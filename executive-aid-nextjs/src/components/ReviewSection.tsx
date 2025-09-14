@@ -19,28 +19,28 @@ export default function ReviewsSection() {
 // Replace this with a fetch from your backend in production
     const mockReviews = [
       {
-        client: "John Doe",
+        client: "Kwame Boateng",
         rating: 5,
         comment: "The team was amazing, very professional and timely!",
-        project: "Custom SaaS Platform",
+        project: "Brand Growth & Social Media Management",
       },
       {
-        client: "Sarah Smith",
+        client: "Anna Brew",
         rating: 5,
         comment: "Great experience, though we needed a few revisions.",
-        project: "E-commerce Website",
+        project: "Financial Management Assistance (Bookkeeping, Tax Filing & Budgeting)",
       },
       {
-        client: "David Johnson",
+        client: "Jeffery Brown",
         rating: 5,
         comment: "Excellent service, exceeded our expectations!",
-        project: "Mobile App Development",
+        project: "Admin Assistance spanning document management, scheduling, and email handling",
       },
       {
-        client: "Amina Yusuf",
+        client: "Nana Kwame Forson",
         rating: 5,
         comment: "Very good support and smooth process overall.",
-        project: "Company Website Redesign",
+        project: "Professional Business Website",
       },
     ];
 
@@ -57,22 +57,27 @@ export default function ReviewsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="p-6">
-            <div className="text-4xl font-bold text-indigo-900 mb-2">10+</div>
+            <div className="text-4xl font-bold text-indigo-900 mb-2">{/* 10+ */}</div>
             <div className="text-gray-600">Clients</div>
           </div>
-
+          
           {/* Dynamic Ratings Stat */}
           <div className="p-6">
+            {/*
             <div className="text-4xl font-bold text-indigo-900 mb-2">
               ⭐ {average}/5
             </div>
+            <div className="text-gray-600">Client Ratings ({reviews.length} reviews) - replace with this code when ready
+              Client Ratings ({reviews.length} reviews) - replace with this code when ready
+            </div>
+            */}
             <div className="text-gray-600">
-              Client Ratings ({reviews.length} reviews)
+                Client Ratings 
             </div>
           </div>
 
           <div className="p-6">
-            <div className="text-4xl font-bold text-indigo-900 mb-2">10+</div>
+            <div className="text-4xl font-bold text-indigo-900 mb-2">{/* 10+ */}</div>
             <div className="text-gray-600">Virtual Assistants</div>
           </div>
         </div>
@@ -94,10 +99,12 @@ export default function ReviewsSection() {
           {reviews.map((review, i) => (
             <SwiperSlide key={i}>
               <div className="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+                {/*
                 <p className="text-lg text-indigo-900 font-semibold mb-1">{review.client}</p>
                 <p className="text-yellow-500 mb-2">{"⭐".repeat(review.rating)}</p>
                 <p className="text-gray-700 mb-3">“{review.comment}”</p>
                 <p className="text-sm text-gray-500">— {review.project}</p>
+                */}
               </div>
             </SwiperSlide>
           ))}

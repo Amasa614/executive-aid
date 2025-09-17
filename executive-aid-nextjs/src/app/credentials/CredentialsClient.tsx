@@ -105,7 +105,7 @@ export default function CredentialsClient() {
             Our Credentials
           </h1>
           <p className="text-base md:text-2xl mb-8 max-w-3xl mx-auto">
-            Explore the results we&apos;ve delivered through efficient processes, creative strategies, and tailored assistance designed to fuel long-term success.
+            We&apos;ve partnered with many businesses to bring their visions to life. Here are a few select projects from clients who have trusted us to proudly showcase their work.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
@@ -226,7 +226,7 @@ export default function CredentialsClient() {
             Let&apos;s discuss how our virtual assistant services can streamline your operations and boost your productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#cta" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
+            <Link href="/" className="bg-white text-indigo-900 px-8 py-3 font-bold rounded-full hover:bg-gray-100 transition-all duration-300">
               Get Free Consultation
             </Link>
             <Link href="/" className="border-2 border-white text-white px-8 py-3 font-bold rounded-full hover:bg-white hover:text-indigo-900 transition-all duration-300">
@@ -289,7 +289,7 @@ export default function CredentialsClient() {
               <ul className="space-y-2 text-gray-400">
                 <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Blogs/Insights</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Privacy Policy</Link></li>
+                <li><Link href="/policies/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Data Protection Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Terms & Conditions</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Cookies</Link></li>

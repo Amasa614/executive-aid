@@ -200,25 +200,25 @@ export default function WebSolutionsClient() {
     // Images for Social Media Management
   const socialmediaImages = [
     "/images/socialmedia1.png",
-    "/images/socialmedia2x.png",
+    "/images/socialmedia2.jpg",
     "/images/socialmedia3.png",
     "/images/socialmedia4.png"
   ];
 
   // Images for Content Creation
   const contentCreationImages = [
-    "/images/contentcreation1.png",
-    "/images/contentcreation2.png",
+    "/images/contentcreation1.jpg",
+    "/images/contentcreation2x.png",
     "/images/contentcreation3.png",
     "/images/contentcreation4.png"
   ];
 
-    // Images for brand Management
-  const brandmgmtImages = [
-    "/images/brandmgmt1.png",
-    "/images/brandmgmt2.png",
-    "/images/brandmgmt3.png",
-    "/images/brandmgmt4.png"
+    // Images for Professional Website Development
+  const websiteImages = [
+    "/images/website1.png",
+    "/images/website2.png",
+    "/images/website3.png",
+    "/images/website4.png"
   ];
   // Images for Digital Marketing
   const digitalMarketingImages = [
@@ -436,17 +436,17 @@ export default function WebSolutionsClient() {
     },
     {
       id: 11,
-      title: 'Brand Engagement & Growth',
-      description: 'A comprehensive brand engagement and growth system for businesses to manage and streamline their brand strategies.',
+      title: 'Professional Website Development',
+      description: 'End-to-end website development solutions that transform your ideas into scalable, high-performing digital platforms.',
       features: [
-        'Automated Brand Monitoring',
-        'Audience Insights & Analytics',
-        'Content Performance Tracking',
-        'Social Media Engagement Tools',
-        'Influencer Collaboration',
-        'Campaign Management',
-        'Customer Feedback & Surveys',
-        'Brand Loyalty Programs',
+        'Custom Website Design & Development',
+        'User Experience (UX)',
+        'User Interface (UI) Optimization',
+        'Performance Analytics & Reporting',
+        'SEO-Friendly Architecture',
+        'E-commerce Solutions & Payment Integration',
+        'Responsive Design for All Devices',
+        'Ongoing Maintenance & Support',
       ],
       status: 'Live Production',
       icon: <Mail className="w-8 h-8" />
@@ -503,15 +503,15 @@ export default function WebSolutionsClient() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
               <div className="text-4xl font-bold text-indigo-900 mb-2">10+</div>
-              <div className="text-gray-600">Service Offerings</div>
+              <div className="text-gray-600">Weekly Time Savings</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-indigo-900 mb-2">99%</div>
-              <div className="text-gray-600">Uptime Record</div>
+              <div className="text-4xl font-bold text-indigo-900 mb-2">5-30%</div>
+              <div className="text-gray-600">Productivity Boost</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-indigo-900 mb-2">24/7</div>
-              <div className="text-gray-600">Support & Monitoring</div>
+              <div className="text-4xl font-bold text-indigo-900 mb-2">Up to 95%</div>
+              <div className="text-gray-600">Reduction in Business Disruptions</div>
             </div>
           </div>
         </div>
@@ -1343,7 +1343,7 @@ export default function WebSolutionsClient() {
                     
                   </div>   
                   <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                    Maintain accuracy and efficiency with reliable data entry and processing—turning raw information into well-organized records you can easily act on.
+                    Maintain accuracy and efficiency with reliable data entry and processing, turning raw information into well-organized records you can easily act on.
                   </p>
                   
                   <div className="mb-6">
@@ -1386,7 +1386,7 @@ export default function WebSolutionsClient() {
                   </h1>
                 </div>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Build a consistent online presence with engaging social media management—curating content, monitoring interactions, and growing your audience across platforms.
+                  Build a consistent online presence with engaging social media management; curating content, monitoring interactions, and growing your audience across platforms.
                 </p>
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -1562,7 +1562,7 @@ export default function WebSolutionsClient() {
                     
                   </div>   
                   <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                    Deliver powerful messaging through creative content and tailored strategies—designed to connect with your audience and reinforce your brand identity.
+                    Deliver powerful messaging through creative content and tailored strategies; designed to connect with your audience and reinforce your brand identity.
                   </p>
                   
                   <div className="mb-6">
@@ -1580,18 +1580,18 @@ export default function WebSolutionsClient() {
           </div>
 
 
-          {/* Project 3 - Brand Engagement & Growth  */}
-          <div id="brand-engagement-and-growth" className="mb-24 scroll-mt-24">
+          {/* Project 3 - Professional Website Development */}
+          <div id="professional-website-development" className="mb-24 scroll-mt-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div className="order-2 lg:order-1">
                 <div className="mb-6">
                   <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-                    Brand Engagement & Growth:
+                    Professional Website Development:
                   </h1>
                 </div>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Elevate your brand presence and foster meaningful connections with tailored strategies that drive engagement and growth.
+                  End-to-end website development solutions that transform your ideas into scalable, high-performing digital platforms.
                 </p>
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -1606,12 +1606,12 @@ export default function WebSolutionsClient() {
               {/* Images Grid */}
               <div className="order-1 lg:order-2">
                 <div className="grid grid-cols-2 gap-4">
-                  {brandmgmtImages.map((img, idx) => (
+                  {websiteImages.map((img, idx) => (
                     <div
                       key={idx}
                       className="bg-gray-100 rounded-2xl overflow-hidden shadow-2xl p-2 cursor-pointer hover:scale-105 transition"
                       onClick={() => {
-                        setModalImages(brandmgmtImages);
+                        setModalImages(websiteImages);
                         setModalImageIndex(idx);
                         setModalOpen(true);
                       }}
@@ -1766,7 +1766,7 @@ export default function WebSolutionsClient() {
                     
                   </div>   
                   <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                    Maximize visibility and impact with targeted digital marketing campaigns—driving traffic, conversions, and measurable results for your business.
+                    Maximize visibility and impact with targeted digital marketing campaigns; driving traffic, conversions, and measurable results for your business.
                   </p>
                   <div className="mb-6">
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -1879,7 +1879,7 @@ export default function WebSolutionsClient() {
               <ul className="space-y-2 text-gray-400">
                 <li><Link href="/about#faq" className="hover:text-white transition">FAQ</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Blogs/Insights</Link></li>
-                <li><Link href="/" className="hover:text-white transition">Privacy Policy</Link></li>
+                <li><Link href="/policies/privacy-policy" className="hover:text-white transition">Privacy Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Data Protection Policy</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Terms & Conditions</Link></li>
                 <li><Link href="/" className="hover:text-white transition">Cookies</Link></li>

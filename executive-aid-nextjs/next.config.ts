@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: '',
   assetPrefix: '',
+  outputFileTracingRoot: __dirname,
 };
 
 export default nextConfig;

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface NavigationProps {
   isScrolled: boolean;
@@ -41,7 +42,7 @@ export default function Navigation({ isScrolled, currentPage, contactLink = "/#c
           {/* Logo & Subtitle */}
           <div className="flex items-center leading-none">
             <Link href="/" className="mr-2 flex-shrink-0">
-              <img
+              <Image
                 src="/images/EAID-logo.jpg" // or your actual logo path
                 alt="ExecutiveAid Logo"
                 width={72}

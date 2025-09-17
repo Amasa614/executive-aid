@@ -6,10 +6,14 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
+    "@supabase/supabase-js": "^2.57.4",
     "lucide-react": "^0.525.0",
     "next": "^15.5.2",
     "react": "^19.0.0",
@@ -24,6 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
+    "husky": "^8.0.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

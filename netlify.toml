@@ -1,5 +1,5 @@
 [build]
-  command = "cd executive-aid-nextjs && npm install && npm run build"
+  command = "cd executive-aid-nextjs && npm ci --ignore-scripts && npm run build"
   publish = "executive-aid-nextjs/out"
   base = "/"
 

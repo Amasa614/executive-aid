@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "type-check": "tsc --noEmit",
-    "prepare": "husky install"
+    "prepare": "is-ci || husky install"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -29,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.5",
     "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
